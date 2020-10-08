@@ -1,6 +1,7 @@
 ﻿using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using PhotoBuy.Pages;
 
 namespace PhotoBuy
 {
@@ -10,7 +11,7 @@ namespace PhotoBuy
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new CameraPage();
         }
 
         protected override void OnStart()

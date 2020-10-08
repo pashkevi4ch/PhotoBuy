@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "JfJ6TDdHgWk8HEvVtsNOza48YDsF6UkdKnFkg6gZ4I/TStg0GEkUn48bJ+cDrJXiCC01xGyx95BEQJTg7rBp0Q==",
+  "dgSpecHash": "HaEG8dyzJDKGwLXhoDvRNinpfQo9lBIkM1C/XUXMkWPl2CBMcWORxExQYyz0ZE7gTpFzEXKb6+DzPGpguqW09Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy.iOS\\PhotoBuy.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Anna\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
   ],
