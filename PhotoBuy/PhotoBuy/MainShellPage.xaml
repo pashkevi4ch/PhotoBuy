@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:pages="clr-namespace:PhotoBuy.Pages"
+             xmlns:view="clr-namespace:PhotoBuy.Views"
+             BackgroundColor="#0239bb"
+             TabBarBackgroundColor="#1651DC"
+             TabBarTitleColor="#00AAFF"
+             x:Class="PhotoBuy.MainShellPage">
+   
+    <Shell.TitleView>
+        <view:BarViewMain></view:BarViewMain>
+    </Shell.TitleView>
+
+    <TabBar>
+        <Tab Icon="InfoButton">
+            <ShellContent ContentTemplate="{DataTemplate pages:CameraPage}"></ShellContent>
+            <ShellContent ContentTemplate="{DataTemplate pages:PreviousRequestsPage}"></ShellContent>
+        </Tab>
+        <Tab Icon="AccountButton">
+            <ShellContent ContentTemplate="{DataTemplate pages:PopularRequestsPage}"></ShellContent>
+        </Tab>
+    </TabBar>
+
+  
+</Shell>

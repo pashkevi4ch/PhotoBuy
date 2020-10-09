@@ -467,3 +467,14 @@ C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\stamp
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\xml\file_paths.xml
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\SQLite-net.dll
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\SQLitePCLRaw.batteries_v2.dll
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\SQLitePCLRaw.core.dll
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\SQLitePCLRaw.lib.e_sqlite3.android.dll
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\SQLitePCLRaw.provider.e_sqlite3.dll
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\System.Buffers.dll
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\System.Memory.dll
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\vtblogo.png
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\infobutton.png
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\accountbutton.png

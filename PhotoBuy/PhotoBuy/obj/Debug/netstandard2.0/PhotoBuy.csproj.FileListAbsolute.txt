@@ -13,3 +13,7 @@ C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\P
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\PhotoBuy.csprojAssemblyReference.cache
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\PreviousRequestsPage.xaml.g.cs
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\PopularRequestsPage.xaml.g.cs
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\PhotoBuy.csproj.CoreCompileInputs.cache
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\XamlC.stamp
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Views\BarViewMain.xaml.g.cs
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\MainShellPage.xaml.g.cs

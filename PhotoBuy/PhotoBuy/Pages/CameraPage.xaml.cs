@@ -15,7 +15,7 @@ namespace PhotoBuy.Pages
     {
         public CameraPage()
         {
-            //InitializeComponent();
+            InitializeComponent();
             Button takePhotoBtn = new Button { Text = "Сделать фото" };
             Button getPhotoBtn = new Button { Text = "Выбрать фото" };
             Image image = new Image();

@@ -33,7 +33,7 @@ namespace PhotoBuy
                 List<Request> requests = new List<Request>();
                 if (databasePreviousRequests != null)
                 {
-                    fairProjects = App.DatabasePreviousRequests.GetRequestsAsync().Result;
+                    requests = App.DatabasePreviousRequests.GetRequestsAsync().Result;
                 }
                 return requests;
             }
@@ -43,7 +43,7 @@ namespace PhotoBuy
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new MainShellPage();
         }
 
         protected override void OnStart()
