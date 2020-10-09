@@ -24,7 +24,7 @@
 
             <StackLayout Grid.Column="1" Grid.Row="1" VerticalOptions="Fill" HorizontalOptions="Fill">
                 <Label Text="Сделать фотографию" TextColor="White" Margin="10"></Label>
-                <Grid>
+                <Grid HorizontalOptions="Fill">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>
                         <RowDefinition Height="Auto"></RowDefinition>
@@ -33,8 +33,10 @@
                         <ColumnDefinition></ColumnDefinition>
                     </Grid.ColumnDefinitions>
 
-                    <ImageButton x:Name="cameraButton" BackgroundColor="Transparent" Source="Camera.png" ></ImageButton>
-                    <ImageButton x:Name="uploadButton" BackgroundColor="Transparent" Source="UploadButton.png" Margin="10"></ImageButton>
+                    <BoxView CornerRadius="25" HorizontalOptions="Center" Color="Gray" BackgroundColor="Black" HeightRequest="50" VerticalOptions="Center" WidthRequest="50"></BoxView>
+                    <!--<ImageButton Grid.Column="0" Grid.Row="0" x:Name="cameraButton" BackgroundColor="Transparent" HorizontalOptions="Center" Source="Camera.png" ></ImageButton>-->
+                    
+                    <ImageButton Grid.Column="0" Grid.Row="1" x:Name="uploadButton" BackgroundColor="Transparent" Source="UploadButton.png" Margin="10"></ImageButton>
                 </Grid>
             </StackLayout>
         </Grid>

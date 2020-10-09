@@ -3,6 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PhotoBuy.App">
     <Application.Resources>
+        <DataTemplate x:Key="MarketplaceTemplate">
+            <Grid Padding="20,10,20,10">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                    <RowDefinition Height="Auto"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
 
+                <Label Grid.Row="0"
+                       Text="{Binding Name}"
+                       FontAttributes="Bold"></Label>
+            </Grid>
+        </DataTemplate>
     </Application.Resources>
 </Application>

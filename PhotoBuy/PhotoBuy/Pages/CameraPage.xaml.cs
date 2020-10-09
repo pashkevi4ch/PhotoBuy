@@ -50,33 +50,33 @@ namespace PhotoBuy.Pages
             //    }
             //};
 
-            cameraButton.Clicked += async (sender, args) =>
-            {
-                await CrossMedia.Current.Initialize();
+            //cameraButton.Clicked += async (sender, args) =>
+            //{
+            //    await CrossMedia.Current.Initialize();
 
-                if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
-                {
-                    //DisplayAlert("No Camera", ":( No camera available.", "OK");
-                    return;
-                }
+            //    if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+            //    {
+            //        //DisplayAlert("No Camera", ":( No camera available.", "OK");
+            //        return;
+            //    }
 
-                var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
-                {
-                    Directory = "Sample",
-                    Name = "test.jpg"
-                });
-                topAlocatedCars = GetTopCars(file);
-                if (file == null)
-                    return;
+            //    var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+            //    {
+            //        Directory = "Sample",
+            //        Name = "test.jpg"
+            //    });
+            //    topAlocatedCars = GetTopCars(file);
+            //    if (file == null)
+            //        return;
 
-                await DisplayAlert("File Location", file.Path, "OK");
+            //    await DisplayAlert("File Location", file.Path, "OK");
 
-                image.Source = ImageSource.FromStream(() =>
-                {
-                    var stream = file.GetStream();
-                    return stream;
-                });
-            };
+            //    image.Source = ImageSource.FromStream(() =>
+            //    {
+            //        var stream = file.GetStream();
+            //        return stream;
+            //    });
+            //};
         }
 
         public List<AlocatedCar> GetTopCars(MediaFile photo)

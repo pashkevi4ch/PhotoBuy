@@ -16,5 +16,10 @@ namespace PhotoBuy.Pages
         {
             InitializeComponent();
         }
+
+        private void marketplaceCollectionView_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }

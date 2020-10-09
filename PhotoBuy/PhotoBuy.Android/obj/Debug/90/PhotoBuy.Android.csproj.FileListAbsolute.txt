@@ -483,3 +483,4 @@ C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\d
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\RestSharp.dll
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\SixLabors.ImageSharp.dll
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\camera.png
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\uploadbutton

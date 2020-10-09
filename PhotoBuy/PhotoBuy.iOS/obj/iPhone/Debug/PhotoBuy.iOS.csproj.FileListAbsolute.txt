@@ -67,3 +67,5 @@ C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.iOS\obj\iPhone\Debug\XamlC
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.iOS\obj\iPhone\Debug\PhotoBuy.iOS.csproj.CopyComplete
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.iOS\obj\iPhone\Debug\PhotoBuy.iOS.exe
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.iOS\obj\iPhone\Debug\PhotoBuy.iOS.pdb
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.iOS\bin\iPhone\Debug\RestSharp.dll
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.iOS\bin\iPhone\Debug\SixLabors.ImageSharp.dll
