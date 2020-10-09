@@ -7,7 +7,7 @@ namespace PhotoBuy.DataBase
 {
     public class Request
     {
-        public int ID { get; set; }
-        public string URiImage { get; set; }
+        public string Name { get; set; }
+        public int Quantity { get; set; }
     }
 }

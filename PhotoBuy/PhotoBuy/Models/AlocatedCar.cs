@@ -3,7 +3,7 @@ namespace PhotoBuy.Models
 {
     public class AlocatedCar
     {
-        public string Name;
-        public decimal Probability;
+        public string Name { get; set; }
+        public decimal Probability { get; set; }
     }
 }

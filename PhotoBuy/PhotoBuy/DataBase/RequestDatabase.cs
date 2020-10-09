@@ -23,9 +23,9 @@ namespace PhotoBuy.DataBase
         {
             return database.InsertAsync(request);
         }
-        public Task<Request> GetRequestAsync(int id)
+        public Task<Request> GetRequestAsync(string name)
         {
-            return database.GetAsync<Request>(id);
+            return database.GetAsync<Request>(name);
         }
         public Task<int> DeleteRequestAsync(int id)
         {

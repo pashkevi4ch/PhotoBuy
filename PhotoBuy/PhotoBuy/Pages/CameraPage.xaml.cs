@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using PhotoBuy.DataBase;
 using Plugin.Media;
 using Plugin.Media.Abstractions;
 using RestSharp;
@@ -20,13 +21,12 @@ namespace PhotoBuy.Pages
     {
         public CameraPage()
         {
-            InitializeComponent();
-            //Button takePhotoBtn = new Button { Text = "Сделать фото" };
-            //Button getPhotoBtn = new Button { Text = "Выбрать фото" };
+            //InitializeComponent();
+            Button takePhotoBtn = new Button { Text = "Сделать фото" };
+            Button getPhotoBtn = new Button { Text = "Выбрать фото" };
             Xamarin.Forms.Image image = new Xamarin.Forms.Image();
             List<AlocatedCar> topAlocatedCars = new List<AlocatedCar>();
-            //// выбор фото
-            uploadButton.Clicked += async (o, e) =>
+            getPhotoBtn.Clicked += async (o, e) =>
             {
                 if (CrossMedia.Current.IsPickPhotoSupported)
                 {
@@ -35,22 +35,21 @@ namespace PhotoBuy.Pages
                     topAlocatedCars = GetTopCars(photo);
                 }
             };
+            Content = new StackLayout
+            {
+                HorizontalOptions = LayoutOptions.Center,
+                Children = {
+                    new StackLayout
+                    {
+                         Children = {takePhotoBtn, getPhotoBtn},
+                         Orientation =StackOrientation.Horizontal,
+                         HorizontalOptions = LayoutOptions.CenterAndExpand
+                    },
+                    image
+                }
+            };
 
-            //Content = new StackLayout
-            //{
-            //    HorizontalOptions = LayoutOptions.Center,
-            //    Children = {
-            //        new StackLayout
-            //        {
-            //             Children = {takePhotoBtn, getPhotoBtn},
-            //             Orientation =StackOrientation.Horizontal,
-            //             HorizontalOptions = LayoutOptions.CenterAndExpand
-            //        },
-            //        image
-            //    }
-            //};
-
-            cameraButton.Clicked += async (sender, args) =>
+            takePhotoBtn.Clicked += async (sender, args) =>
             {
                 await CrossMedia.Current.Initialize();
 
@@ -78,8 +77,7 @@ namespace PhotoBuy.Pages
                 });
             };
         }
-
-        public List<AlocatedCar> GetTopCars(MediaFile photo)
+        private List<AlocatedCar> GetTopCars(MediaFile photo)
         {
             var client = new RestClient("https://gw.hackathon.vtb.ru/vtb/hackathon/car-recognize");
             var request = new RestRequest(Method.POST);
@@ -96,14 +94,27 @@ namespace PhotoBuy.Pages
             var base64Image = Convert.ToBase64String(File.ReadAllBytes(photo.Path));
             request.AddParameter("application/json", $"{{\"content\":\"{base64Image}\"}}", ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
-            var ListResponse = response.Content.ToString().Replace(@"\", "").Replace('"', ' ').Replace("}}", "").Replace("{ probabilities :{", "").Trim().Split(',');
+            var listResponse = response.Content.ToString().Replace(@"\", "").Replace('"', ' ').Replace("}}", "").Replace("{ probabilities :{", "").Trim().Split(',');
             List<AlocatedCar> topCars = new List<AlocatedCar>();
-            foreach (var i in ListResponse)
+            foreach (var i in listResponse)
             {
                 var newCar = new AlocatedCar();
                 newCar.Name = i.Split(':')[0];
                 newCar.Probability = decimal.Parse(i.Split(':')[1]);
                 topCars.Add(newCar);
+            }
+            try
+            {
+                var req = App.DatabasePreviousRequests.GetRequestAsync(topCars.First(s => s.Probability == topCars.Max(e => e.Probability)).Name);
+                req.Result.Quantity += 1;
+                App.DatabasePreviousRequests.UpdateAsync(req.Result);
+            }
+            catch
+            {
+                var req = new Request();
+                req.Name = topCars.First(s => s.Probability == topCars.Max(e => e.Probability)).Name;
+                req.Quantity = 1;
+                App.DatabasePreviousRequests.SaveRequestAsync(req);
             }
             return topCars.OrderByDescending(s => s.Probability).Take(5).ToList();
         }

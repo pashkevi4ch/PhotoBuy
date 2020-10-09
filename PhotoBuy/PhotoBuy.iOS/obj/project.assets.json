@@ -1770,39 +1770,32 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Anna\\.nuget\\packages\\": {},
-    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+    "/Users/pavelpetrov/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy.iOS\\PhotoBuy.iOS.csproj",
+      "projectUniqueName": "/Users/pavelpetrov/Projects/PhotoBuy/PhotoBuy/PhotoBuy.iOS/PhotoBuy.iOS.csproj",
       "projectName": "PhotoBuy.iOS",
-      "projectPath": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy.iOS\\PhotoBuy.iOS.csproj",
-      "packagesPath": "C:\\Users\\Anna\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy.iOS\\obj\\",
+      "projectPath": "/Users/pavelpetrov/Projects/PhotoBuy/PhotoBuy/PhotoBuy.iOS/PhotoBuy.iOS.csproj",
+      "packagesPath": "/Users/pavelpetrov/.nuget/packages/",
+      "outputPath": "/Users/pavelpetrov/Projects/PhotoBuy/PhotoBuy/PhotoBuy.iOS/obj/",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
-      "fallbackFolders": [
-        "C:\\Microsoft\\Xamarin\\NuGet\\"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Anna\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "/Users/pavelpetrov/.config/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "xamarinios10"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy\\PhotoBuy.csproj": {
-              "projectPath": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy\\PhotoBuy.csproj"
+            "/Users/pavelpetrov/Projects/PhotoBuy/PhotoBuy/PhotoBuy/PhotoBuy.csproj": {
+              "projectPath": "/Users/pavelpetrov/Projects/PhotoBuy/PhotoBuy/PhotoBuy/PhotoBuy.csproj"
             }
           }
         }
