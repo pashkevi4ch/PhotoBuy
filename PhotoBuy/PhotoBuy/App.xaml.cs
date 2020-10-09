@@ -11,7 +11,7 @@ namespace PhotoBuy
         {
             InitializeComponent();
 
-            MainPage = new CameraPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

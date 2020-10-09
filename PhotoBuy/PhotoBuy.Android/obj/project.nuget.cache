@@ -1,9 +1,17 @@
 {
   "version": 2,
-  "dgSpecHash": "+RIt2u38krwpfoOBl9VZd+PDm35Sn+kzH2gjgwcpO2zrdW4/J3wV7N8MbrJED6ca92N9i394a9asQ4HeUJMPqg==",
+  "dgSpecHash": "pb9ywIZ1JxHzC3hP/dma2l5t9yk6ZCHGuTwpWPgxmWiAu1CQuYceGuRplYdbJkvdSq92CTgPmnlFBByPcYzqzw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy.Android\\PhotoBuy.Android.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Anna\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\sqlitepclraw.lib.e_sqlite3.android\\2.0.3\\sqlitepclraw.lib.e_sqlite3.android.2.0.3.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\sqlitepclraw.provider.e_sqlite3\\2.0.3\\sqlitepclraw.provider.e_sqlite3.2.0.3.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Anna\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\Anna\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.common\\1.1.1.3\\xamarin.android.arch.core.common.1.1.1.3.nupkg.sha512",
     "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.android.arch.core.runtime\\1.1.1.3\\xamarin.android.arch.core.runtime.1.1.1.3.nupkg.sha512",

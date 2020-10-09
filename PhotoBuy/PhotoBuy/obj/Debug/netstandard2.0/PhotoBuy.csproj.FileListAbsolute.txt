@@ -7,8 +7,9 @@ C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\M
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\CameraPage.xaml.g.cs
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\PhotoBuy.AssemblyInfoInputs.cache
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\PhotoBuy.AssemblyInfo.cs
-C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\PhotoBuy.csproj.CoreCompileInputs.cache
-C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\PhotoBuy.dll
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\ref\PhotoBuy.dll
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\PhotoBuy.pdb
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\PhotoBuy.csprojAssemblyReference.cache
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\PreviousRequestsPage.xaml.g.cs
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\PopularRequestsPage.xaml.g.cs
