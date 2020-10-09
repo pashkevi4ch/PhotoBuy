@@ -5,7 +5,8 @@
              xmlns:view="clr-namespace:PhotoBuy.Views"
              BackgroundColor="#0239bb"
              TabBarBackgroundColor="#1651DC"
-             TabBarTitleColor="#00AAFF"
+             TabBarTitleColor="White"
+             TabBarUnselectedColor="#00AAFF"
              x:Class="PhotoBuy.MainShellPage">
    
     <Shell.TitleView>
