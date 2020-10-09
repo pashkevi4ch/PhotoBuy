@@ -20,13 +20,13 @@ namespace PhotoBuy.Pages
     {
         public CameraPage()
         {
-            //InitializeComponent();
-            Button takePhotoBtn = new Button { Text = "Сделать фото" };
-            Button getPhotoBtn = new Button { Text = "Выбрать фото" };
+            InitializeComponent();
+            //Button takePhotoBtn = new Button { Text = "Сделать фото" };
+            //Button getPhotoBtn = new Button { Text = "Выбрать фото" };
             Xamarin.Forms.Image image = new Xamarin.Forms.Image();
             List<AlocatedCar> topAlocatedCars = new List<AlocatedCar>();
             //// выбор фото
-            getPhotoBtn.Clicked += async (o, e) =>
+            uploadButton.Clicked += async (o, e) =>
             {
                 if (CrossMedia.Current.IsPickPhotoSupported)
                 {
@@ -36,40 +36,21 @@ namespace PhotoBuy.Pages
                 }
             };
 
-            //// съемка фото
-            //takePhotoBtn.Clicked += async (o, e) =>
+            //Content = new StackLayout
             //{
-            //    await CrossMedia.Current.Initialize();
-            //    if (CrossMedia.Current.IsCameraAvailable && CrossMedia.Current.IsTakePhotoSupported)
-            //    {
-            //        MediaFile file = await CrossMedia.Current.TakePhotoAsync(new StoreCameraMediaOptions
+            //    HorizontalOptions = LayoutOptions.Center,
+            //    Children = {
+            //        new StackLayout
             //        {
-            //            SaveToAlbum = true,
-            //            Directory = "Sample",
-            //            Name = $"{DateTime.Now.ToString("dd.MM.yyyy_hh.mm.ss")}.jpg"
-            //        });
-
-            //        if (file == null)
-            //            return;
-
-            //        img.Source = ImageSource.FromFile(file.Path);
+            //             Children = {takePhotoBtn, getPhotoBtn},
+            //             Orientation =StackOrientation.Horizontal,
+            //             HorizontalOptions = LayoutOptions.CenterAndExpand
+            //        },
+            //        image
             //    }
             //};
-            Content = new StackLayout
-            {
-                HorizontalOptions = LayoutOptions.Center,
-                Children = {
-                    new StackLayout
-                    {
-                         Children = {takePhotoBtn, getPhotoBtn},
-                         Orientation =StackOrientation.Horizontal,
-                         HorizontalOptions = LayoutOptions.CenterAndExpand
-                    },
-                    image
-                }
-            };
 
-            takePhotoBtn.Clicked += async (sender, args) =>
+            cameraButton.Clicked += async (sender, args) =>
             {
                 await CrossMedia.Current.Initialize();
 
@@ -97,6 +78,7 @@ namespace PhotoBuy.Pages
                 });
             };
         }
+
         public List<AlocatedCar> GetTopCars(MediaFile photo)
         {
             var client = new RestClient("https://gw.hackathon.vtb.ru/vtb/hackathon/car-recognize");

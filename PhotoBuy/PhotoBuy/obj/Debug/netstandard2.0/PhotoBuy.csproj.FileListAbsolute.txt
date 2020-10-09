@@ -19,3 +19,4 @@ C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\P
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\MarketplacePage.xaml.g.cs
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\NotificationPage.xaml.g.cs
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\SettingsPage.xaml.g.cs
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\PhotoBuy.csprojAssemblyReference.cache
