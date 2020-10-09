@@ -1,31 +1,28 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy\\PhotoBuy.csproj": {}
+    "/Users/pavelpetrov/Projects/PhotoBuy1/PhotoBuy/PhotoBuy/PhotoBuy.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy\\PhotoBuy.csproj": {
+    "/Users/pavelpetrov/Projects/PhotoBuy1/PhotoBuy/PhotoBuy/PhotoBuy.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy\\PhotoBuy.csproj",
+        "projectUniqueName": "/Users/pavelpetrov/Projects/PhotoBuy1/PhotoBuy/PhotoBuy/PhotoBuy.csproj",
         "projectName": "PhotoBuy",
-        "projectPath": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy\\PhotoBuy.csproj",
-        "packagesPath": "C:\\Users\\Anna\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy\\obj\\",
+        "projectPath": "/Users/pavelpetrov/Projects/PhotoBuy1/PhotoBuy/PhotoBuy/PhotoBuy.csproj",
+        "packagesPath": "/Users/pavelpetrov/.nuget/packages/",
+        "outputPath": "/Users/pavelpetrov/Projects/PhotoBuy1/PhotoBuy/PhotoBuy/obj/",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\"
+          "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\Anna\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "/Users/pavelpetrov/.config/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "netstandard2.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -47,6 +44,14 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[106.11.7, )"
+            },
+            "SixLabors.ImageSharp": {
+              "target": "Package",
+              "version": "[1.0.1, )"
             },
             "Xam.Plugin.Media": {
               "target": "Package",
@@ -75,7 +80,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/3.1.402/RuntimeIdentifierGraph.json"
         }
       }
     }
