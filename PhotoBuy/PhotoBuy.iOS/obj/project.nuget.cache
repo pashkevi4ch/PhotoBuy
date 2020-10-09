@@ -1,22 +1,22 @@
 {
   "version": 2,
-  "dgSpecHash": "2+lb3Tmc2J4TL4eVy+KTQPqXSDfO3F3R4/z5aykmf2FhxSPYJc8XJDt8fm2O4KkqZ33OMjktCte2lLIRKfvGrA==",
+  "dgSpecHash": "ODm1fjGodP2733lK0ta65DzesqI8OPi7Gphl5I8nBysJKdh95SCk90bnbV2u2Kal1/x+IgmTysJVmx7/wO2TFg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy.iOS\\PhotoBuy.iOS.csproj",
+  "projectFilePath": "/Users/pavelpetrov/Projects/PhotoBuy/PhotoBuy/PhotoBuy.iOS/PhotoBuy.iOS.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Anna\\.nuget\\packages\\restsharp\\106.11.7\\restsharp.106.11.7.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\sixlabors.imagesharp\\1.0.1\\sixlabors.imagesharp.1.0.1.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\sqlite-net-pcl\\1.7.335\\sqlite-net-pcl.1.7.335.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.3\\sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\sqlitepclraw.core\\2.0.3\\sqlitepclraw.core.2.0.3.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.3\\sqlitepclraw.provider.dynamic_cdecl.2.0.3.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
-    "C:\\Users\\Anna\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
-    "C:\\Microsoft\\Xamarin\\NuGet\\xamarin.forms\\4.6.0.1141\\xamarin.forms.4.6.0.1141.nupkg.sha512"
+    "/Users/pavelpetrov/.nuget/packages/restsharp/106.11.7/restsharp.106.11.7.nupkg.sha512",
+    "/Users/pavelpetrov/.nuget/packages/sixlabors.imagesharp/1.0.1/sixlabors.imagesharp.1.0.1.nupkg.sha512",
+    "/Users/pavelpetrov/.nuget/packages/sqlite-net-pcl/1.7.335/sqlite-net-pcl.1.7.335.nupkg.sha512",
+    "/Users/pavelpetrov/.nuget/packages/sqlitepclraw.bundle_green/2.0.3/sqlitepclraw.bundle_green.2.0.3.nupkg.sha512",
+    "/Users/pavelpetrov/.nuget/packages/sqlitepclraw.core/2.0.3/sqlitepclraw.core.2.0.3.nupkg.sha512",
+    "/Users/pavelpetrov/.nuget/packages/sqlitepclraw.provider.dynamic_cdecl/2.0.3/sqlitepclraw.provider.dynamic_cdecl.2.0.3.nupkg.sha512",
+    "/Users/pavelpetrov/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/Users/pavelpetrov/.nuget/packages/system.memory/4.5.3/system.memory.4.5.3.nupkg.sha512",
+    "/Users/pavelpetrov/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/Users/pavelpetrov/.nuget/packages/system.runtime.compilerservices.unsafe/4.5.2/system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "/Users/pavelpetrov/.nuget/packages/xam.plugin.media/5.0.1/xam.plugin.media.5.0.1.nupkg.sha512",
+    "/Users/pavelpetrov/.nuget/packages/xamarin.essentials/1.5.3.2/xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "/Users/pavelpetrov/.nuget/packages/xamarin.forms/4.6.0.1141/xamarin.forms.4.6.0.1141.nupkg.sha512"
   ],
   "logs": []
 }
