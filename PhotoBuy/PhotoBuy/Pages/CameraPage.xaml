@@ -34,7 +34,7 @@
                     </Grid.ColumnDefinitions>
 
                     <BoxView CornerRadius="25" HorizontalOptions="Center" Color="Gray" BackgroundColor="Black" HeightRequest="50" VerticalOptions="Center" WidthRequest="50"></BoxView>
-                    <!--<ImageButton Grid.Column="0" Grid.Row="0" x:Name="cameraButton" BackgroundColor="Transparent" HorizontalOptions="Center" Source="Camera.png" ></ImageButton>-->
+                    <ImageButton Grid.Column="0" Grid.Row="0" x:Name="cameraButton" BackgroundColor="Transparent" HorizontalOptions="Center" Source="Camera.png" ></ImageButton>
                     
                     <ImageButton Grid.Column="0" Grid.Row="1" x:Name="uploadButton" BackgroundColor="Transparent" Source="UploadButton.png" Margin="10"></ImageButton>
                 </Grid>

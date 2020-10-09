@@ -12,6 +12,7 @@ using Xamarin.Forms.Xaml;
 using SixLabors.ImageSharp;
 using SixLabors.ImageSharp.Processing;
 using PhotoBuy.Models;
+using PhotoBuy.DataBase;
 
 namespace PhotoBuy.Pages
 {
@@ -21,11 +22,9 @@ namespace PhotoBuy.Pages
         public CameraPage()
         {
             InitializeComponent();
-            //Button takePhotoBtn = new Button { Text = "Сделать фото" };
-            //Button getPhotoBtn = new Button { Text = "Выбрать фото" };
+            T();
             Xamarin.Forms.Image image = new Xamarin.Forms.Image();
             List<AlocatedCar> topAlocatedCars = new List<AlocatedCar>();
-            //// выбор фото
             uploadButton.Clicked += async (o, e) =>
             {
                 if (CrossMedia.Current.IsPickPhotoSupported)
@@ -36,50 +35,35 @@ namespace PhotoBuy.Pages
                 }
             };
 
-            //Content = new StackLayout
-            //{
-            //    HorizontalOptions = LayoutOptions.Center,
-            //    Children = {
-            //        new StackLayout
-            //        {
-            //             Children = {takePhotoBtn, getPhotoBtn},
-            //             Orientation =StackOrientation.Horizontal,
-            //             HorizontalOptions = LayoutOptions.CenterAndExpand
-            //        },
-            //        image
-            //    }
-            //};
+            cameraButton.Clicked += async (sender, args) =>
+            {
+                await CrossMedia.Current.Initialize();
 
-            //cameraButton.Clicked += async (sender, args) =>
-            //{
-            //    await CrossMedia.Current.Initialize();
+                if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+                {
+                    return;
+                }
 
-            //    if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
-            //    {
-            //        //DisplayAlert("No Camera", ":( No camera available.", "OK");
-            //        return;
-            //    }
+                var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+                {
+                    Directory = "Sample",
+                    Name = "test.jpg"
+                });
+                topAlocatedCars = GetTopCars(file);
+                if (file == null)
+                    return;
 
-            //    var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
-            //    {
-            //        Directory = "Sample",
-            //        Name = "test.jpg"
-            //    });
-            //    topAlocatedCars = GetTopCars(file);
-            //    if (file == null)
-            //        return;
+                //await DisplayAlert("File Location", file.Path, "OK");
 
-            //    await DisplayAlert("File Location", file.Path, "OK");
-
-            //    image.Source = ImageSource.FromStream(() =>
-            //    {
-            //        var stream = file.GetStream();
-            //        return stream;
-            //    });
-            //};
+                image.Source = ImageSource.FromStream(() =>
+                {
+                    var stream = file.GetStream();
+                    return stream;
+                });
+            };
         }
 
-        public List<AlocatedCar> GetTopCars(MediaFile photo)
+        private List<AlocatedCar> GetTopCars(MediaFile photo)
         {
             var client = new RestClient("https://gw.hackathon.vtb.ru/vtb/hackathon/car-recognize");
             var request = new RestRequest(Method.POST);
@@ -96,16 +80,33 @@ namespace PhotoBuy.Pages
             var base64Image = Convert.ToBase64String(File.ReadAllBytes(photo.Path));
             request.AddParameter("application/json", $"{{\"content\":\"{base64Image}\"}}", ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
-            var ListResponse = response.Content.ToString().Replace(@"\", "").Replace('"', ' ').Replace("}}", "").Replace("{ probabilities :{", "").Trim().Split(',');
+            var listResponse = response.Content.ToString().Replace(@"\", "").Replace('"', ' ').Replace("}}", "").Replace("{ probabilities :{", "").Trim().Split(',');
             List<AlocatedCar> topCars = new List<AlocatedCar>();
-            foreach (var i in ListResponse)
+            foreach (var i in listResponse)
             {
                 var newCar = new AlocatedCar();
                 newCar.Name = i.Split(':')[0];
                 newCar.Probability = decimal.Parse(i.Split(':')[1]);
                 topCars.Add(newCar);
             }
+            try
+            {
+                var req = App.DatabasePreviousRequests.GetRequestAsync(topCars.First(s => s.Probability == topCars.Max(e => e.Probability)).Name);
+                req.Result.Quantity += 1;
+                App.DatabasePreviousRequests.UpdateAsync(req.Result);
+            }
+            catch
+            {
+                var req = new Request();
+                req.Name = topCars.First(s => s.Probability == topCars.Max(e => e.Probability)).Name;
+                req.Quantity = 1;
+                App.DatabasePreviousRequests.SaveRequestAsync(req);
+            }
             return topCars.OrderByDescending(s => s.Probability).Take(5).ToList();
+        }
+        private async void T()
+        {
+            await DisplayAlert(App.DatabasePreviousRequests.GetRequestsAsync().Result.Count().ToString(), App.DatabasePreviousRequests.GetRequestsAsync().Result[0].Quantity.ToString(), "OK");
         }
     }
 }

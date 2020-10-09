@@ -2348,32 +2348,39 @@
     ]
   },
   "packageFolders": {
-    "/Users/pavelpetrov/.nuget/packages/": {}
+    "C:\\Users\\Anna\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/pavelpetrov/Projects/PhotoBuy/PhotoBuy/PhotoBuy.Android/PhotoBuy.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy.Android\\PhotoBuy.Android.csproj",
       "projectName": "PhotoBuy.Android",
-      "projectPath": "/Users/pavelpetrov/Projects/PhotoBuy/PhotoBuy/PhotoBuy.Android/PhotoBuy.Android.csproj",
-      "packagesPath": "/Users/pavelpetrov/.nuget/packages/",
-      "outputPath": "/Users/pavelpetrov/Projects/PhotoBuy/PhotoBuy/PhotoBuy.Android/obj/",
+      "projectPath": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy.Android\\PhotoBuy.Android.csproj",
+      "packagesPath": "C:\\Users\\Anna\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
       "configFilePaths": [
-        "/Users/pavelpetrov/.config/NuGet/NuGet.Config"
+        "C:\\Users\\Anna\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
       ],
       "originalTargetFrameworks": [
         "monoandroid90"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "monoandroid90": {
           "projectReferences": {
-            "/Users/pavelpetrov/Projects/PhotoBuy/PhotoBuy/PhotoBuy/PhotoBuy.csproj": {
-              "projectPath": "/Users/pavelpetrov/Projects/PhotoBuy/PhotoBuy/PhotoBuy/PhotoBuy.csproj"
+            "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy\\PhotoBuy.csproj": {
+              "projectPath": "C:\\Users\\Anna\\source\\repos\\PhotoBuy\\PhotoBuy\\PhotoBuy\\PhotoBuy.csproj"
             }
           }
         }
