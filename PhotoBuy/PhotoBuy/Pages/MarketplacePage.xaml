@@ -4,8 +4,8 @@
              x:Class="PhotoBuy.Pages.MarketplacePage">
     <ContentPage.Content>
         <StackLayout>
-            <CollectionView x:Name="marketplaceCollectionView" ItemTemplate="{StaticResource MarketplaceTemplate}"
-                            SelectionMode="Single" SelectionChanged="marketplaceCollectionView_SelectionChanged"></CollectionView>
+            <!--<CollectionView x:Name="marketplaceCollectionView" ItemTemplate="{StaticResource MarketplaceTemplate}"
+                            SelectionMode="Single" SelectionChanged="marketplaceCollectionView_SelectionChanged"></CollectionView>-->
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

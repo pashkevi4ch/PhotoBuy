@@ -53,8 +53,6 @@ namespace PhotoBuy.Pages
                 if (file == null)
                     return;
 
-                //await DisplayAlert("File Location", file.Path, "OK");
-
                 image.Source = ImageSource.FromStream(() =>
                 {
                     var stream = file.GetStream();
@@ -102,11 +100,17 @@ namespace PhotoBuy.Pages
                 req.Quantity = 1;
                 App.DatabasePreviousRequests.SaveRequestAsync(req);
             }
+            //БД
+            foreach (var car in topCars.OrderByDescending(s => s.Probability).Take(5).ToList())
+            {
+                App.DatabaseTopCars.SaveCarAsync(car);
+            }
+            T();
             return topCars.OrderByDescending(s => s.Probability).Take(5).ToList();
         }
         private async void T()
         {
-            await DisplayAlert(App.DatabasePreviousRequests.GetRequestsAsync().Result.Count().ToString(), App.DatabasePreviousRequests.GetRequestsAsync().Result[0].Quantity.ToString(), "OK");
+            await Shell.Current.GoToAsync("marketplacepage");
         }
     }
 }

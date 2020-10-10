@@ -5,6 +5,7 @@ using PhotoBuy.Pages;
 using System.IO;
 using PhotoBuy.DataBase;
 using System.Collections.Generic;
+using PhotoBuy.Models;
 
 namespace PhotoBuy
 {
@@ -36,6 +37,35 @@ namespace PhotoBuy
                     requests = App.DatabasePreviousRequests.GetRequestsAsync().Result;
                 }
                 return requests;
+            }
+        }
+
+        public const string DATABASE_NAME_TopCars = "TopCars.db";
+        static TopCarsDatabase databaseTopCars;
+        public static TopCarsDatabase DatabaseTopCars
+        {
+            get
+            {
+                if (databaseTopCars == null)
+                {
+                    databaseTopCars = new TopCarsDatabase(
+                        Path.Combine(
+                            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME_TopCars));
+                }
+                return databaseTopCars;
+            }
+        }
+
+        public static IList<AlocatedCar> TopCars
+        {
+            get
+            {
+                List<AlocatedCar> cars = new List<AlocatedCar>();
+                if (databasePreviousRequests != null)
+                {
+                    cars = App.databaseTopCars.GetCarsAsync().Result;
+                }
+                return cars;
             }
         }
 
