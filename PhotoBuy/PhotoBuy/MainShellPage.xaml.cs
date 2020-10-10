@@ -23,7 +23,7 @@ namespace PhotoBuy
         void RegisterRoutes()
         {
             routes.Add("marketplacepage", typeof(MarketplacePage));
-
+            routes.Add("cardetailpage", typeof(CarDetailPage));
             foreach (var item in routes)
             {
                 Routing.RegisterRoute(item.Key, item.Value);
