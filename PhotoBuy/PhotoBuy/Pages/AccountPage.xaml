@@ -55,7 +55,10 @@
                     <ColumnDefinition></ColumnDefinition>
                 </Grid.ColumnDefinitions>
                 <Label Grid.Column="0" FontSize="15" Margin="8,0,0,0" VerticalOptions="Center" Grid.Row="0" Text="Логин" HorizontalOptions="Start"></Label>
-                <Entry Grid.Column="1" BackgroundColor="Transparent" TextColor="Black" Margin="0,5,8,0" Grid.Row="0" ></Entry>
+                <Entry Grid.Column="1" BackgroundColor="Beige" TextColor="Black" Margin="0,5,8,0" Grid.Row="0" ></Entry>
+                <StackLayout Grid.Column="1" Grid.Row="0" BackgroundColor="Aqua">
+                    <Entry></Entry>
+                </StackLayout>
                 <Image Source="GrayLine" Margin="5,4,5,0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
                 <Label Grid.Column="0" FontSize="15" Margin="8,0,0,0" VerticalOptions="Center" Text="Пароль" Grid.Row="1" ></Label>
                 <Entry Grid.Column="1" TextColor="Black" BackgroundColor="Transparent" Grid.Row="1" Margin="0,5,8,0" IsPassword="True"></Entry>

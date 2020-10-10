@@ -27,38 +27,59 @@ namespace PhotoBuy.Pages
             List<CarInfo> topAlocatedCars = new List<CarInfo>();
             uploadButton.Clicked += async (o, e) =>
             {
-                if (CrossMedia.Current.IsPickPhotoSupported)
+                try
                 {
-                    MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-                    image.Source = ImageSource.FromFile(photo.Path);
-                    topAlocatedCars = GetTopCars(photo);
+                    if (CrossMedia.Current.IsPickPhotoSupported)
+                    {
+                        MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+                        image.Source = ImageSource.FromFile(photo.Path);
+                        topAlocatedCars = GetTopCars(photo);
+                        NextPage();
+                    }
+                }
+                catch
+                {
+                    App.Current.MainPage = new MainShellPage();
                 }
             };
 
             cameraButton.Clicked += async (sender, args) =>
             {
-                await CrossMedia.Current.Initialize();
+                    await CrossMedia.Current.Initialize();
 
-                if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
-                {
-                    return;
-                }
+                    if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+                    {
+                        return;
+                    }
 
-                var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
-                {
-                    Directory = "Sample",
-                    Name = "test.jpg"
-                });
-                topAlocatedCars = GetTopCars(file);
-                if (file == null)
-                    return;
+                    var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+                    {
+                        Directory = "Sample",
+                        Name = "test.jpg"
+                    });
+                    topAlocatedCars = GetTopCars(file);
+                    if (file == null)
+                        return;
 
-                image.Source = ImageSource.FromStream(() =>
-                {
-                    var stream = file.GetStream();
-                    return stream;
-                });
+                    image.Source = ImageSource.FromStream(() =>
+                    {
+                        var stream = file.GetStream();
+                        return stream;
+                    });
+                    T();
+                    NextPage();
+                
             };
+        }
+
+        private async void NextPage()
+        {
+            await Shell.Current.GoToAsync("marketplacepage");
+        }
+
+        private async void T()
+        {
+            await DisplayAlert("norm vse", "", "OK");
         }
 
         private List<CarInfo> GetTopCars(MediaFile photo)
