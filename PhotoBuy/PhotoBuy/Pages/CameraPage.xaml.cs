@@ -214,24 +214,9 @@ namespace PhotoBuy.Pages
                     car.Model = s.Split(new string[] { "," }, 5, StringSplitOptions.None)[3];
                     car.OwnTitle = s.Split(new string[] { "," }, 6, StringSplitOptions.None)[4];
                     car.MinPrice = int.Parse(s.Split(new string[] { "," }, 7, StringSplitOptions.None)[5]);
-                    car.RenderPhotos = new List<string>();
-                    foreach (var i in s.Split(new string[] { "[" }, 2, StringSplitOptions.None)[1].Split(new string[] { "]" }, 2, StringSplitOptions.None)[0].Split(new string[] { "," }, StringSplitOptions.None))
-                    {
-                        car.RenderPhotos.Add(i);
-                    }
+                    car.RenderPhotos = s.Split(new string[] { "[" }, 2, StringSplitOptions.None)[1].Split(new string[] { "]" }, 2, StringSplitOptions.None)[0];
                     car.ColorsCount = int.Parse(s.Split(new string[] { "]," }, 2, StringSplitOptions.None)[1].Split(new string[] { ",[" }, StringSplitOptions.None)[0]);
-                    car.SizesPhotos = new List<string>();
-                    foreach (var i in s.Split(new string[] { "[" }, StringSplitOptions.None)[2].Split(new string[] { "]" }, StringSplitOptions.None)[0].Split(new string[] { "," }, StringSplitOptions.None))
-                    {
-                        try
-                        {
-                            car.SizesPhotos.Add(i);
-                        }
-                        catch
-                        {
-                            continue;
-                        }
-                    }
+                    car.SizesPhotos = s.Split(new string[] { "[" }, StringSplitOptions.None)[2].Split(new string[] { "]" }, StringSplitOptions.None)[0];
                     carList.Add(car);
                 }
                 catch { continue; }
