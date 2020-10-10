@@ -23,7 +23,7 @@
             </Grid.ColumnDefinitions>
 
             <StackLayout Grid.Column="1" Grid.Row="1" VerticalOptions="Fill" HorizontalOptions="Fill">
-                <Label Text="Сделать фотографию" TextColor="White" Margin="10"></Label>
+                <Label Text="Сделать фотографию" TextColor="White" Margin="10" HorizontalOptions="Center"></Label>
                 <Grid HorizontalOptions="Fill">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"></RowDefinition>

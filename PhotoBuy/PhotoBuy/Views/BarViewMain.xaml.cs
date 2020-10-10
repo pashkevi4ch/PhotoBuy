@@ -16,5 +16,15 @@ namespace PhotoBuy.Views
         {
             InitializeComponent();
         }
+
+        private async void AccountButton_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("accountpage");
+        }
+
+        private async void SettingsButton_Clicked(object sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync("settingspage");
+        }
     }
 }

@@ -61,11 +61,56 @@ namespace PhotoBuy
             get
             {
                 List<AlocatedCar> cars = new List<AlocatedCar>();
-                if (databasePreviousRequests != null)
+                if (databaseTopCars != null)
                 {
                     cars = App.databaseTopCars.GetCarsAsync().Result;
                 }
                 return cars;
+            }
+        }
+
+        public static IList<AlocatedCar> TopFourCars
+        {
+            get
+            {
+                List<AlocatedCar> cars = new List<AlocatedCar>();
+                if (databaseTopCars != null)
+                {
+                    for (int i = 1;i < 5; i++)
+                    {
+                        cars.Add(App.TopCars[i]);
+                    }
+                }
+                return cars;
+            }
+        }
+
+        public const string DATABASE_NAME_CurrentCar = "CurrentCar.db";
+        static CurrentCarDatabase databaseCurrentCar;
+        public static CurrentCarDatabase DatabaseCurrentCar
+        {
+            get
+            {
+                if (databaseCurrentCar == null)
+                {
+                    databaseCurrentCar = new CurrentCarDatabase(
+                        Path.Combine(
+                            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME_CurrentCar));
+                }
+                return databaseCurrentCar;
+            }
+        }
+
+        public static AlocatedCar CurrentCar
+        {
+            get
+            {
+                AlocatedCar car = new AlocatedCar();
+                if (databaseCurrentCar != null)
+                {
+                    car = App.DatabaseCurrentCar.GetCarsAsync().Result[0];
+                }
+                return car;
             }
         }
 

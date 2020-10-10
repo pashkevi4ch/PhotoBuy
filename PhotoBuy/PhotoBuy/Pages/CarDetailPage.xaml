@@ -1,12 +1,50 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:view="clr-namespace:PhotoBuy.Views"
              x:Class="PhotoBuy.Pages.CarDetailPage">
+    <Shell.TitleView>
+        <view:MarketplaceBarView></view:MarketplaceBarView>
+    </Shell.TitleView>
+    
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label x:Name="CarNameLabel" HorizontalOptions="Center" FontAttributes="Bold" Margin="10"></Label>
+            <Image Aspect="AspectFill" x:Name="CarImage"></Image>
+            <Label Text="Характеристики" FontAttributes="Bold" HorizontalOptions="Center" Margin="10"></Label>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <BoxView BackgroundColor="#E7E7E7" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="0" Grid.Row="0" CornerRadius="10"></BoxView>
+                
+            </Grid>
+
+            <Label Text="Кредит на спецусловиях...." FontAttributes="Bold" HorizontalOptions="Center"></Label>
+            <Label Text="Первый взнос"></Label>
+            <StackLayout x:Name="SliderStackLayout"></StackLayout>
+
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition Width="*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+
+                <BoxView BackgroundColor="#E7E7E7" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="0" Grid.Row="0" CornerRadius="10"></BoxView>
+
+            </Grid>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

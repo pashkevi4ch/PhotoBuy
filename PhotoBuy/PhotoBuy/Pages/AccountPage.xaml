@@ -1,12 +1,79 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="PhotoBuy.Pages.AccountPage">
+ xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+ x:Class="PhotoBuy.Pages.AccountPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto">
+                </RowDefinition>
+                <RowDefinition Height="Auto">
+                </RowDefinition>
+                <RowDefinition Height="Auto">
+                </RowDefinition>
+                <RowDefinition Height="Auto">
+                </RowDefinition>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition>
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <Label Text="Войдите в аккаунт:" FontAttributes="Bold" Margin="5,0,0,0"></Label>
+            <BoxView Grid.Row="1" CornerRadius="10" Grid.Column="0" Margin="5,0,5,0" Color="#E7E7E7"></BoxView>
+            <Grid Grid.Row="1" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" FontSize="15" Margin="8,0,0,0" VerticalOptions="Center" Grid.Row="0" Text="Логин" HorizontalOptions="Start"></Label>
+                <Entry Grid.Column="1" BackgroundColor="Transparent" TextColor="Black" Margin="0,5,8,0" Grid.Row="0" ></Entry>
+                <Image Source="GrayLine" Margin="5,4,5,0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
+                <Label Grid.Column="0" FontSize="15" Margin="8,0,0,0" VerticalOptions="Center" Text="Пароль" Grid.Row="1" ></Label>
+                <Entry Grid.Column="1" TextColor="Black" BackgroundColor="Transparent" Grid.Row="1" Margin="0,5,8,0" IsPassword="True"></Entry>
+                <Image Source="GrayLine" Margin="5,65,5,0" Grid.ColumnSpan="2" Grid.RowSpan="3"></Image>
+                <ImageButton Grid.ColumnSpan="2" Margin="8,0,8,0" Grid.Row="2" Source="Entry.png" ></ImageButton>
+
+            </Grid>
+            <Label Text="Регистрация:" FontAttributes="Bold" Grid.Row="2"></Label>
+            <BoxView Grid.Row="3" CornerRadius="10" Grid.Column="0" Margin="5,0,5,0" Color="#E7E7E7"></BoxView>
+            <Grid Grid.Row="3" Grid.Column="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"></ColumnDefinition>
+                    <ColumnDefinition></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Grid.Column="0" FontSize="15" Margin="8,0,0,0" VerticalOptions="Center" Grid.Row="0" Text="Логин" HorizontalOptions="Start"></Label>
+                <Entry Grid.Column="1" BackgroundColor="Transparent" TextColor="Black" Margin="0,5,8,0" Grid.Row="0" ></Entry>
+                <Image Source="GrayLine" Margin="5,4,5,0" Grid.ColumnSpan="2" Grid.RowSpan="2"></Image>
+                <Label Grid.Column="0" FontSize="15" Margin="8,0,0,0" VerticalOptions="Center" Text="Пароль" Grid.Row="1" ></Label>
+                <Entry Grid.Column="1" TextColor="Black" BackgroundColor="Transparent" Grid.Row="1" Margin="0,5,8,0" IsPassword="True"></Entry>
+                <Image Source="GrayLine" Margin="5,47,5,0" Grid.ColumnSpan="2" Grid.RowSpan="3"></Image>
+                <Label Grid.Column="0" FontSize="15" Margin="8,0,0,0" VerticalOptions="Center" Grid.Row="2" Text="ФИО" HorizontalOptions="Start"></Label>
+                <Entry Grid.Column="1" BackgroundColor="Transparent" TextColor="Black" Margin="0,5,8,0" Grid.Row="2" ></Entry>
+                <Image Source="GrayLine" Margin="5,93,5,0" Grid.ColumnSpan="2" Grid.RowSpan="4"></Image>
+                <Label Grid.Column="0" FontSize="15" Margin="8,0,0,0" VerticalOptions="Center" Grid.Row="3" Text="Почта" HorizontalOptions="Start"></Label>
+                <Entry Grid.Column="1" BackgroundColor="Transparent" TextColor="Black" Margin="0,5,8,0" Grid.Row="3" ></Entry>
+                <Image Source="GrayLine" Margin="5,138,5,0" Grid.ColumnSpan="2" Grid.RowSpan="5"></Image>
+                <Label Grid.Column="0" FontSize="15" Margin="8,0,0,0" VerticalOptions="Center" Grid.Row="4" Text="Телефон" HorizontalOptions="Start"></Label>
+                <Entry Grid.Column="1" BackgroundColor="Transparent" TextColor="Black" Margin="0,5,8,0" Grid.Row="4" ></Entry>
+                <Image Source="GrayLine" Margin="5,180,5,0" Grid.ColumnSpan="2" Grid.RowSpan="6">
+                    </Image>
+                    <ImageButton Grid.ColumnSpan="2" Margin="8,0,8,0" Grid.Row="5" Source="Registration.png" ></ImageButton>
+
+            </Grid>
+        </Grid>
+
     </ContentPage.Content>
 </ContentPage>

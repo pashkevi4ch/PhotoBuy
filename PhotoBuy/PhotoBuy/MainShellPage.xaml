@@ -14,12 +14,20 @@
     </Shell.TitleView>
 
     <TabBar>
-        <Tab Icon="InfoButton">
+        <Tab Icon="HomePage" Title="Главная">
             <ShellContent ContentTemplate="{DataTemplate pages:CameraPage}"></ShellContent>
-            <!--<ShellContent ContentTemplate="{DataTemplate pages:PreviousRequestsPage}"></ShellContent>-->
         </Tab>
-        <Tab Icon="AccountButton">
+        <Tab Icon="HistoryIcon" Title="История">
+            <ShellContent ContentTemplate="{DataTemplate pages:PreviousRequestsPage}"></ShellContent>
+        </Tab>
+        <Tab Icon="Popular" Title="Популярное">
             <ShellContent ContentTemplate="{DataTemplate pages:PopularRequestsPage}"></ShellContent>
+        </Tab>
+        <Tab Icon="Sign" Title="Блог">
+            <ShellContent ContentTemplate="{DataTemplate pages:BlogPage}"></ShellContent>
+        </Tab>
+        <Tab Icon="Bell" Title="Уведомления">
+            <ShellContent ContentTemplate="{DataTemplate pages:NotificationPage}"></ShellContent>
         </Tab>
     </TabBar>
 

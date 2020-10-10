@@ -24,40 +24,63 @@ namespace PhotoBuy.Pages
             InitializeComponent();
             Xamarin.Forms.Image image = new Xamarin.Forms.Image();
             List<AlocatedCar> topAlocatedCars = new List<AlocatedCar>();
-            uploadButton.Clicked += async (o, e) =>
+            try
             {
-                if (CrossMedia.Current.IsPickPhotoSupported)
+                uploadButton.Clicked += async (o, e) =>
                 {
-                    MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
-                    image.Source = ImageSource.FromFile(photo.Path);
-                    topAlocatedCars = GetTopCars(photo);
-                }
-            };
+                    try
+                    {
+                        if (CrossMedia.Current.IsPickPhotoSupported)
+                        {
+                            MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
+                            image.Source = ImageSource.FromFile(photo.Path);
+                            topAlocatedCars = GetTopCars(photo);
+                        }
+                    }
+                    catch
+                    {
+                        App.Current.MainPage = new MainShellPage();
+                    }
+                    
+                };
 
-            cameraButton.Clicked += async (sender, args) =>
+                cameraButton.Clicked += async (sender, args) =>
+                {
+                    try
+                    {
+                        await CrossMedia.Current.Initialize();
+
+                        if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+                        {
+                            return;
+                        }
+
+                        var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+                        {
+                            Directory = "Sample",
+                            Name = "test.jpg"
+                        });
+                        topAlocatedCars = GetTopCars(file);
+                        if (file == null)
+                            return;
+
+                        image.Source = ImageSource.FromStream(() =>
+                        {
+                            var stream = file.GetStream();
+                            return stream;
+                        });
+                    }
+                    catch
+                    {
+                        App.Current.MainPage = new MainShellPage();
+                    }
+                   
+                };
+            }
+            catch
             {
-                await CrossMedia.Current.Initialize();
-
-                if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
-                {
-                    return;
-                }
-
-                var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
-                {
-                    Directory = "Sample",
-                    Name = "test.jpg"
-                });
-                topAlocatedCars = GetTopCars(file);
-                if (file == null)
-                    return;
-
-                image.Source = ImageSource.FromStream(() =>
-                {
-                    var stream = file.GetStream();
-                    return stream;
-                });
-            };
+                App.Current.MainPage = new MainShellPage();
+            }
         }
 
         private List<AlocatedCar> GetTopCars(MediaFile photo)

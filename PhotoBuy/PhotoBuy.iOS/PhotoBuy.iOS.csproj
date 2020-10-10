@@ -68,6 +68,7 @@
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <BundleResource Include="Resources\UploadButton" />
   </ItemGroup>
   <ItemGroup>
     <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
@@ -132,5 +133,47 @@
       <Project>{20FE5187-9653-407F-8FAB-D566373DAC09}</Project>
       <Name>PhotoBuy</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\AccountButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Camera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\HistoryIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\HomePage.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\InfoButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MarketPlace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Popular.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\PopularRequestsIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Sign.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\VTBlogo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Entry.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Registration.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\Bell.png" />
   </ItemGroup>
 </Project>

@@ -18,17 +18,24 @@ namespace PhotoBuy
         {
             InitializeComponent();
             RegisterRoutes();
+            T();
         }
 
         void RegisterRoutes()
         {
             routes.Add("marketplacepage", typeof(MarketplacePage));
             routes.Add("cardetailpage", typeof(CarDetailPage));
+            routes.Add("accountpage", typeof(AccountPage));
+            routes.Add("settingspage", typeof(SettingsPage));
             foreach (var item in routes)
             {
                 Routing.RegisterRoute(item.Key, item.Value);
             }
         }
 
+        private async void T()
+        {
+            await DisplayAlert(App.DatabasePreviousRequests.GetRequestsAsync().Result.Count.ToString(), "", "OK");
+        }
     }
 }

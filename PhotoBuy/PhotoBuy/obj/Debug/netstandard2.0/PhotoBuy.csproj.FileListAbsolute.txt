@@ -42,3 +42,6 @@ C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\P
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\ref\PhotoBuy.dll
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\PhotoBuy.pdb
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\PhotoBuy.csprojAssemblyReference.cache
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\CarDetailPage.xaml.g.cs
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\BlogPage.xaml.g.cs
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Views\MarketplaceBarView.xaml.g.cs
