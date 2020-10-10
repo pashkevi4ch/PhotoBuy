@@ -76,7 +76,7 @@ namespace PhotoBuy
                 List<CarInfo> cars = new List<CarInfo>();
                 if (databaseTopCars != null)
                 {
-                    for (int i = 1;i < 5; i++)
+                    for (int i = 1;i < App.TopCars.Count; i++)
                     {
                         cars.Add(App.TopCars[i]);
                     }

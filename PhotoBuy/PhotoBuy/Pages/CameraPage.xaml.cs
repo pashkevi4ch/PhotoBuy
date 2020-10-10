@@ -34,8 +34,9 @@ namespace PhotoBuy.Pages
                         MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
                         image.Source = ImageSource.FromFile(photo.Path);
                         topAlocatedCars = GetTopCars(photo);
-                        NextPage();
+
                     }
+                    NextPage();
                 }
                 catch
                 {
@@ -57,16 +58,16 @@ namespace PhotoBuy.Pages
                         Directory = "Sample",
                         Name = "test.jpg"
                     });
+             //   T();
                     topAlocatedCars = GetTopCars(file);
                     if (file == null)
                         return;
-
+                //T();
                     image.Source = ImageSource.FromStream(() =>
                     {
                         var stream = file.GetStream();
                         return stream;
                     });
-                    T();
                     NextPage();
                 
             };
@@ -75,11 +76,6 @@ namespace PhotoBuy.Pages
         private async void NextPage()
         {
             await Shell.Current.GoToAsync("marketplacepage");
-        }
-
-        private async void T()
-        {
-            await DisplayAlert("norm vse", "", "OK");
         }
 
         private List<CarInfo> GetTopCars(MediaFile photo)
@@ -105,7 +101,7 @@ namespace PhotoBuy.Pages
             {
                 var newCar = new AlocatedCar();
                 newCar.Name = i.Split(':')[0];
-                newCar.Probability = decimal.Parse(i.Split(':')[1]);
+                newCar.Probability = i.Split(':')[1];
                 topCars.Add(newCar);
             }
             try
@@ -229,22 +225,29 @@ namespace PhotoBuy.Pages
                 {
                     var alocated = s.Name.Trim();
                     var info = (j.Name + " " + j.Model).Trim();
-                    if (alocated == info)
+                    try
                     {
-                        j.Probability = s.Probability;
-                        resultList.Add(j);
+                        if (alocated == info)
+                        {
+                            j.Probability = s.Probability;
+                            resultList.Add(j);
+                            break;
+                        }
                     }
-                }
+                    catch {
+                        break;
+                    }                }
             }
             var test = resultList.OrderByDescending(s => s.Probability).Take(5).ToList();
 
             //БД
             App.DatabaseTopCars.DeleteAll();
-            foreach (var car in resultList.OrderByDescending(s => s.Probability).Take(5).ToList())
+            foreach (var car in resultList.OrderByDescending(s => s.Probability).ToList())
             {
                 App.DatabaseTopCars.SaveCarAsync(car);
             }
-            return resultList.OrderByDescending(s => s.Probability).Take(5).ToList();
+
+            return resultList.OrderByDescending(s => s.Probability).ToList();
 
         }
 

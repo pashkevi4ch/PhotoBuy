@@ -11,7 +11,6 @@ C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\MonoA
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\build.props
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\adb.props
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\PhotoBuy.Android.csprojAssemblyReference.cache
-C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\stamp\_BuildLibraryImportsCache.stamp
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res.flag
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\R.txt
@@ -494,3 +493,4 @@ C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\d
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\union.png
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\bell.png
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp

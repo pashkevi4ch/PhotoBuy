@@ -15,7 +15,7 @@ namespace PhotoBuy.Models
         public string RenderPhotos { get; set; }
         public int ColorsCount { get; set; }
         public string SizesPhotos { get; set; }
-        public decimal Probability { get; set; }
+        public string Probability { get; set; }
 
     }
 }
