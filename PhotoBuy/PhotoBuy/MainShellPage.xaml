@@ -16,7 +16,7 @@
     <TabBar>
         <Tab Icon="InfoButton">
             <ShellContent ContentTemplate="{DataTemplate pages:CameraPage}"></ShellContent>
-            <ShellContent ContentTemplate="{DataTemplate pages:PreviousRequestsPage}"></ShellContent>
+            <!--<ShellContent ContentTemplate="{DataTemplate pages:PreviousRequestsPage}"></ShellContent>-->
         </Tab>
         <Tab Icon="AccountButton">
             <ShellContent ContentTemplate="{DataTemplate pages:PopularRequestsPage}"></ShellContent>

@@ -22,7 +22,6 @@ namespace PhotoBuy.Pages
         public CameraPage()
         {
             InitializeComponent();
-            T();
             Xamarin.Forms.Image image = new Xamarin.Forms.Image();
             List<AlocatedCar> topAlocatedCars = new List<AlocatedCar>();
             uploadButton.Clicked += async (o, e) =>
@@ -101,6 +100,7 @@ namespace PhotoBuy.Pages
                 App.DatabasePreviousRequests.SaveRequestAsync(req);
             }
             //БД
+            App.DatabaseTopCars.DeleteAll();
             foreach (var car in topCars.OrderByDescending(s => s.Probability).Take(5).ToList())
             {
                 App.DatabaseTopCars.SaveCarAsync(car);
