@@ -14,17 +14,28 @@ using SixLabors.ImageSharp.Processing;
 using PhotoBuy.Models;
 using PhotoBuy.DataBase;
 using Newtonsoft.Json;
+using System.Timers;
+using System.Threading.Tasks;
 
 namespace PhotoBuy.Pages
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CameraPage : ContentPage
     {
+        private static Timer aTimer;
         public CameraPage()
         {
             InitializeComponent();
             Xamarin.Forms.Image image = new Xamarin.Forms.Image();
             List<CarInfo> topAlocatedCars = new List<CarInfo>();
+            //while (true)
+            //{
+            //    aTimer = new Timer(2000);
+            //    aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+            //    aTimer.Enabled = true;
+            //    aTimer.AutoReset = true;
+            //}        
+
             uploadButton.Clicked += async (o, e) =>
             {
                 try
@@ -58,11 +69,11 @@ namespace PhotoBuy.Pages
                         Directory = "Sample",
                         Name = "test.jpg"
                     });
-             //   T();
+
                     topAlocatedCars = GetTopCars(file);
                     if (file == null)
                         return;
-                //T();
+                
                     image.Source = ImageSource.FromStream(() =>
                     {
                         var stream = file.GetStream();
@@ -76,6 +87,18 @@ namespace PhotoBuy.Pages
         private async void NextPage()
         {
             await Shell.Current.GoToAsync("marketplacepage");
+        }
+
+        private void OnTimedEvent(object source, ElapsedEventArgs e)
+        {
+            if (changingLabel.Text == "Сделать фотографию")
+            {
+                changingLabel.Text = "Загрузить фотографию";
+            }
+            else
+            {
+                changingLabel.Text = "Сделать фотографию";
+            }
         }
 
         private List<CarInfo> GetTopCars(MediaFile photo)
@@ -251,6 +274,7 @@ namespace PhotoBuy.Pages
 
         }
 
+
     }
-    }
+}
 

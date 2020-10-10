@@ -176,4 +176,10 @@
   <ItemGroup>
     <BundleResource Include="Resources\Bell.png" />
   </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\MainCamera.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\UploadFile.png" />
+  </ItemGroup>
 </Project>

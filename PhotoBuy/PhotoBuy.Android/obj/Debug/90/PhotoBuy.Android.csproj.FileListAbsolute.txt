@@ -494,3 +494,5 @@ C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\d
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\bell.png
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\_VerifyXamarinAndroidSupportVersions.stamp
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\uploadfile.png
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\maincamera.png

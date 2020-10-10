@@ -16,8 +16,9 @@ namespace PhotoBuy.Pages
 
         public MarketplacePage1()
         {
-            InitializeComponent();
-            //firstCarNameLabel.Text = App.TopCars[0].Name;
+            InitializeComponent(); 
+            firstCarNameLabel.Text = App.DatabaseTopCars.GetCarsAsync().Result[0].Name;
+            firstCarImage.Source = App.DatabaseTopCars.GetCarsAsync().Result[0].RenderPhotos.Split(new string[] { "," }, StringSplitOptions.None)[0];
         }
 
         private async void T()

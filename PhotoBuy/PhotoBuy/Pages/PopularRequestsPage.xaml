@@ -5,7 +5,7 @@
              xmlns:local="clr-namespace:PhotoBuy"
              x:Class="PhotoBuy.Pages.PopularRequestsPage">
     <Shell.TitleView>
-        <view:BarViewMain></view:BarViewMain>
+        <view:BarView></view:BarView>
     </Shell.TitleView>
     
     <ContentPage.Content>
