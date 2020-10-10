@@ -56,11 +56,11 @@ namespace PhotoBuy
             }
         }
 
-        public static IList<AlocatedCar> TopCars
+        public static IList<CarInfo> TopCars
         {
             get
             {
-                List<AlocatedCar> cars = new List<AlocatedCar>();
+                List<CarInfo> cars = new List<CarInfo>();
                 if (databaseTopCars != null)
                 {
                     cars = App.databaseTopCars.GetCarsAsync().Result;
@@ -69,11 +69,11 @@ namespace PhotoBuy
             }
         }
 
-        public static IList<AlocatedCar> TopFourCars
+        public static IList<CarInfo> TopFourCars
         {
             get
             {
-                List<AlocatedCar> cars = new List<AlocatedCar>();
+                List<CarInfo> cars = new List<CarInfo>();
                 if (databaseTopCars != null)
                 {
                     for (int i = 1;i < 5; i++)
@@ -101,11 +101,11 @@ namespace PhotoBuy
             }
         }
 
-        public static AlocatedCar CurrentCar
+        public static CarInfo CurrentCar
         {
             get
             {
-                AlocatedCar car = new AlocatedCar();
+                CarInfo car = new CarInfo();
                 if (databaseCurrentCar != null)
                 {
                     car = App.DatabaseCurrentCar.GetCarsAsync().Result[0];

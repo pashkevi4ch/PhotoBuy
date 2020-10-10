@@ -493,3 +493,4 @@ C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\d
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\settings.png
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\union.png
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\res\drawable\bell.png
+C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy.Android\obj\Debug\90\android\assets\Newtonsoft.Json.dll

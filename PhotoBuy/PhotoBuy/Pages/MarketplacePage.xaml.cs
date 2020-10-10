@@ -34,7 +34,7 @@ namespace PhotoBuy.Pages
 
         private void marketplaceListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {
-            AlocatedCar car = e.Item as AlocatedCar;
+            CarInfo car = e.Item as CarInfo;
             App.DatabaseCurrentCar.DeleteAll();
             App.DatabaseCurrentCar.SaveCarAsync(car);
             NextPage();

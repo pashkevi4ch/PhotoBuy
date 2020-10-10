@@ -100,12 +100,7 @@ namespace PhotoBuy.Pages
                 req.Quantity = 1;
                 App.DatabasePreviousRequests.SaveRequestAsync(req);
             }
-            //БД
-            App.DatabaseTopCars.DeleteAll();
-            foreach (var car in topCars.OrderByDescending(s => s.Probability).Take(5).ToList())
-            {
-                App.DatabaseTopCars.SaveCarAsync(car);
-            }
+
             var marketString = new List<string>() {
             "LADA, Россия, http://tradeins.space/uploads/brand/83/3c28f6d355f7fbd7dd1abcb7fb2dd422b8ed1f66.png,Granta,I Рестайлинг,470900,[https://tradeins.space/uploads/photo/123943/418.png,https://tradeins.space/uploads/photo/123943/418.png,https://tradeins.space/uploads/photo/123943/418.png,https://tradeins.space/uploads/photo/123943/418.png,https://tradeins.space/uploads/photo/2603010/240.png,https://tradeins.space/uploads/photo/11957/411_1.png,https://tradeins.space/uploads/photo/20316/690_1.png,https://tradeins.space/uploads/photo/1631029/1.png,https://tradeins.space/uploads/photo/511796/univers.png,https://tradeins.space/uploads/photo/511605/0.png,https://tradeins.space/uploads/photo/511606/011.png,https://tradeins.space/uploads/photo/511795/hetch.png,https://tradeins.space/uploads/photo/511794/univer-mal.png,https://tradeins.space/uploads/photo/4546/ef72f688082a1f08da21f9a076948791.png,https://tradeins.space/uploads/photo/4545/ganta-liftbee.png,https://tradeins.space/uploads/photo/511793/hetch-mal.png,],5,[https://207231.selcdn.ru/locator-media/models_desktop_250_q90/tradeins.space-uploads-photo-511796-univers.png,https://207231.selcdn.ru/locator-media/models_desktop_250_q90/tradeins.space-uploads-photo-511796-univers.png,]",
             "LADA,Россия,http://tradeins.space/uploads/brand/83/3c28f6d355f7fbd7dd1abcb7fb2dd422b8ed1f66.png,Largus,I,619900,[https://tradeins.space/uploads/photo/123947/largus_424_1.png,https://tradeins.space/uploads/photo/123947/largus_424_1.png,https://tradeins.space/uploads/photo/4664/191_venera.png,https://tradeins.space/uploads/photo/4657/191.png,https://tradeins.space/uploads/photo/107103/largus-kross-5-mest_1.png,https://tradeins.space/uploads/photo/107107/larg_1.png,https://tradeins.space/uploads/photo/4552/largus-kross-7-mest.png,],2,[https://207231.selcdn.ru/locator-media/models_desktop_250_q90/tradeins.space-uploads-photo-107107-larg_1.png,https://207231.selcdn.ru/locator-media/models_desktop_250_q90/tradeins.space-uploads-photo-107107-larg_1.png,]",
@@ -236,6 +231,13 @@ namespace PhotoBuy.Pages
                 }
             }
             var test = resultList.OrderByDescending(s => s.Probability).Take(5).ToList();
+
+            //БД
+            App.DatabaseTopCars.DeleteAll();
+            foreach (var car in resultList.OrderByDescending(s => s.Probability).Take(5).ToList())
+            {
+                App.DatabaseTopCars.SaveCarAsync(car);
+            }
             return resultList.OrderByDescending(s => s.Probability).Take(5).ToList();
 
         }

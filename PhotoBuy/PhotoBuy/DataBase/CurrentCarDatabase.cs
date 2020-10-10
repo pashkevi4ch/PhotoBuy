@@ -13,30 +13,30 @@ namespace PhotoBuy.DataBase
         public CurrentCarDatabase(string databasePath)
         {
             database = new SQLiteAsyncConnection(databasePath);
-            database.CreateTableAsync<AlocatedCar>().Wait();
+            database.CreateTableAsync<CarInfo>().Wait();
         }
-        public Task<List<AlocatedCar>> GetCarsAsync()
+        public Task<List<CarInfo>> GetCarsAsync()
         {
-            return database.Table<AlocatedCar>().ToListAsync();
+            return database.Table<CarInfo>().ToListAsync();
         }
 
-        public Task<int> SaveCarAsync(AlocatedCar car)
+        public Task<int> SaveCarAsync(CarInfo car)
         {
             return database.InsertAsync(car);
         }
-        public Task<AlocatedCar> GetCarAsync(string name)
+        public Task<CarInfo> GetCarAsync(string name)
         {
-            return database.GetAsync<AlocatedCar>(name);
+            return database.GetAsync<CarInfo>(name);
         }
         public Task<int> DeleteCarAsync(int id)
         {
-            return database.DeleteAsync<AlocatedCar>(id);
+            return database.DeleteAsync<CarInfo>(id);
         }
         public Task<int> DeleteAll()
         {
-            return database.DeleteAllAsync<AlocatedCar>();
+            return database.DeleteAllAsync<CarInfo>();
         }
-        public Task<int> UpdateAsync(AlocatedCar car)
+        public Task<int> UpdateAsync(CarInfo car)
         {
             return database.UpdateAsync(car);
         }
