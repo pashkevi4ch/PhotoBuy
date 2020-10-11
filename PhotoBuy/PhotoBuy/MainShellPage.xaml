@@ -20,7 +20,7 @@
         <Tab Icon="HistoryIcon" Title="История">
             <ShellContent ContentTemplate="{DataTemplate pages:PreviousRequestsPage}"></ShellContent>
         </Tab>
-        <Tab Icon="Popular" Title="Популярное">
+        <Tab Icon="Popular" Title="Популярное" Route="pop">
             <ShellContent ContentTemplate="{DataTemplate pages:PopularRequestsPage}"></ShellContent>
         </Tab>
         <Tab Icon="Sign" Title="Блог">

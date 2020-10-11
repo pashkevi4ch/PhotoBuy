@@ -30,5 +30,12 @@ namespace PhotoBuy.Pages
         {
             await Shell.Current.GoToAsync("cardetailpage");
         }
+
+        //protected override void OnAppearing()
+        //{
+        //    base.OnAppearing();
+        //    App.Current.MainPage = new MainShellPage();
+        //    Shell.Current.GoToAsync("//pop");
+        //}
     }
 }

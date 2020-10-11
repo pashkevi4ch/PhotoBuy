@@ -35,7 +35,7 @@
                     <Label Text="Страна" Grid.Column="0" Grid.Row="0" TextColor="Black" Margin="10,10,0,0"></Label>
                     <Label Text="Модель" Grid.Column="0" Grid.Row="1" TextColor="Black" Margin="10,10,0,0"></Label>
                     <Label Text="Поколение" Grid.Column="0" Grid.Row="2" TextColor="Black" Margin="10,10,0,0"></Label>
-                    <Label Text="Вариантов цветов" Grid.Column="0" Grid.Row="3" TextColor="Black" Margin="10,10,0,10"></Label>
+                    <Label Text="Вариантов цвета" Grid.Column="0" Grid.Row="3" TextColor="Black" Margin="10,10,0,10"></Label>
 
                     <Label x:Name="CountryLabel" Grid.Row="0" Grid.Column="1" TextColor="Black" Margin="10,10,0,0"></Label>
                     <Label x:Name="ModelLabel" Grid.Row="1" Grid.Column="1" TextColor="Black" Margin="10,10,0,0"></Label>
@@ -43,7 +43,7 @@
                     <Label x:Name="ColorsLabel" Grid.Row="3" Grid.Column="1" TextColor="Black" Margin="10,10,0,10"></Label>
                 </Grid>
 
-                <Label Text="Кредит на спецусловиях от 9%" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,15,0,0" TextColor="Black"></Label>
+                <Label Text="Кредит на спецусловиях от 10.1%" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,15,0,0" TextColor="Black"></Label>
                 <Label Text="Первый взнос"></Label>
                 <StackLayout x:Name="SliderStackLayout"></StackLayout>
 
