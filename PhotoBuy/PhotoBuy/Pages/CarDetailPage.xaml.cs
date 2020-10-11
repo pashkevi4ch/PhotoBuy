@@ -81,7 +81,13 @@ namespace PhotoBuy.Pages
 
         private void confirmButton_Clicked(object sender, EventArgs e)
         {
-
+            var client = new RestClient("https://gw.hackathon.vtb.ru/vtb/hackathon/carloan");
+            var request = new RestRequest(Method.POST);
+            request.AddHeader("x-ibm-client-id", "b3996f788ffa2e39e01197b60036d30b");
+            request.AddHeader("content-type", "application/json");
+            request.AddHeader("accept", "application/json");
+            request.AddParameter("application/json", "{\"comment\":\"Комментарий\",\"customer_party\":{\"email\":\"" + emailEntry.Text + "\",\"income_amount\":" + incomeAmountEntry.Text + ",\"person\":{\"birth_date_time\":\"" + birthDateEntry.Text + "\",\"birth_place\":\"" + birthPlaceEntry.Text + "\",\"family_name\":\"" + familyNameEntry.Text + "\",\"first_name\":\"" + firstNameEntry.Text + "\",\"gender\":\"" + genderEntry.Text + "\",\"middle_name\":\"" + middleNameEntry.Text + "\",\"nationality_country_code\":\"RU\"},\"phone\":\"" + phoneEntry.Text + "\"},\"datetime\":\"2020-10-10T08:15:47Z\",\"interest_rate\":15.7,\"requested_amount\":" + App.CurrentCar.MinPrice + ",\"requested_term\":" + (int)Slider2.Value*12 + ",\"trade_mark\":\"" + App.CurrentCar.Name + "\",\"vehicle_cost\":" + App.CurrentCar.MinPrice + "}", ParameterType.RequestBody);
+            IRestResponse response = client.Execute(request);
         }
     }
 }
