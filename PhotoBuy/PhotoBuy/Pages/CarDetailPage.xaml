@@ -8,45 +8,65 @@
     </Shell.TitleView>
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label x:Name="CarNameLabel" HorizontalOptions="Center" FontAttributes="Bold" Margin="10"></Label>
-            <Image Aspect="AspectFill" x:Name="CarImage"></Image>
-            <Label Text="Характеристики" FontAttributes="Bold" HorizontalOptions="Center" Margin="10"></Label>
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
+        <ScrollView>
+            <StackLayout>
+                <Label x:Name="CarNameLabel" HorizontalOptions="Center" FontAttributes="Bold" Margin="10"></Label>
+                <Image Aspect="AspectFill" x:Name="CarImage"></Image>
+                <Label Text="Характеристики" FontAttributes="Bold" HorizontalOptions="Center" Margin="10"></Label>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
 
-                <BoxView BackgroundColor="#E7E7E7" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="0" Grid.Row="0" CornerRadius="10"></BoxView>
-                
-            </Grid>
+                    <BoxView BackgroundColor="#E7E7E7" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="0" Grid.Row="0" CornerRadius="10"></BoxView>
 
-            <Label Text="Кредит на спецусловиях...." FontAttributes="Bold" HorizontalOptions="Center"></Label>
-            <Label Text="Первый взнос"></Label>
-            <StackLayout x:Name="SliderStackLayout"></StackLayout>
+                </Grid>
 
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="Auto"></ColumnDefinition>
-                    <ColumnDefinition Width="*"></ColumnDefinition>
-                </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                    <RowDefinition></RowDefinition>
-                </Grid.RowDefinitions>
+                <Label Text="Кредит на спецусловиях...." FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                <Label Text="Первый взнос"></Label>
+                <StackLayout x:Name="SliderStackLayout"></StackLayout>
 
-                <BoxView BackgroundColor="#E7E7E7" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="0" Grid.Row="0" CornerRadius="10"></BoxView>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="Auto"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <Grid.RowDefinitions>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
 
-            </Grid>
+                    <BoxView BackgroundColor="#E7E7E7" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="0" Grid.Row="0" CornerRadius="10"></BoxView>
 
-            <Label Text="Email"></Label>
-        </StackLayout>
+                </Grid>
+
+                <Label Text="Email"></Label>
+                <Entry x:Name="emailEntry"></Entry>
+                <Label Text="Зарплата"></Label>
+                <Entry x:Name="incomeAmountEntry"></Entry>
+                <Label Text="Дата рождения (гггг-мм-дд)"></Label>
+                <Entry x:Name="birthDateEntry"></Entry>
+                <Label Text="Место рождения"></Label>
+                <Entry x:Name="birthPlaceEntry"></Entry>
+                <Label Text="Фамилия"></Label>
+                <Entry x:Name="familyNameEntry"></Entry>
+                <Label Text="Имя"></Label>
+                <Entry x:Name="firstNameEntry"></Entry>
+                <Label Text="Пол"></Label>
+                <Entry x:Name="genderEntry"></Entry>
+                <Label Text="Отчество"></Label>
+                <Entry x:Name="middleNameEntry"></Entry>
+                <Label Text="Телефон"></Label>
+                <Entry x:Name="phoneEntry"></Entry>
+            </StackLayout>
+        </ScrollView>
+        
     </ContentPage.Content>
 </ContentPage>

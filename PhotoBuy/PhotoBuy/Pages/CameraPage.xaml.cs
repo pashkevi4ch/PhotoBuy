@@ -57,6 +57,8 @@ namespace PhotoBuy.Pages
 
             cameraButton.Clicked += async (sender, args) =>
             {
+                try
+                {
                     await CrossMedia.Current.Initialize();
 
                     if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
@@ -73,13 +75,42 @@ namespace PhotoBuy.Pages
                     topAlocatedCars = GetTopCars(file);
                     if (file == null)
                         return;
-                
+
                     image.Source = ImageSource.FromStream(() =>
                     {
                         var stream = file.GetStream();
                         return stream;
                     });
                     NextPage();
+                }
+                catch
+                {
+
+                    App.Current.MainPage = new MainShellPage();
+                }
+                    //await CrossMedia.Current.Initialize();
+
+                    //if (!CrossMedia.Current.IsCameraAvailable || !CrossMedia.Current.IsTakePhotoSupported)
+                    //{
+                    //    return;
+                    //}
+
+                    //var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
+                    //{
+                    //    Directory = "Sample",
+                    //    Name = "test.jpg"
+                    //});
+
+                    //topAlocatedCars = GetTopCars(file);
+                    //if (file == null)
+                    //    return;
+                
+                    //image.Source = ImageSource.FromStream(() =>
+                    //{
+                    //    var stream = file.GetStream();
+                    //    return stream;
+                    //});
+                    //NextPage();
                 
             };
         }
