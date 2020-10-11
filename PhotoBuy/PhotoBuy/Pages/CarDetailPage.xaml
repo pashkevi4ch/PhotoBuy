@@ -45,6 +45,8 @@
                 <BoxView BackgroundColor="#E7E7E7" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="0" Grid.Row="0" CornerRadius="10"></BoxView>
 
             </Grid>
+
+            <Label Text="Email"></Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
