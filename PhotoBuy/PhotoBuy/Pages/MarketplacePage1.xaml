@@ -44,6 +44,7 @@
                                 <Label Grid.Row="0"
                        Text="{Binding Name}"
                        FontAttributes="Bold"></Label>
+                                <Image Source="{Binding RenderPhotos}" Grid.Row="1"></Image>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
