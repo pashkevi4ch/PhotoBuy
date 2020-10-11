@@ -30,6 +30,7 @@ namespace PhotoBuy.Pages
         {
             App.DatabaseCurrentCar.DeleteAll();
             App.DatabaseCurrentCar.SaveCarAsync(App.TopCars[0]);
+            App.HistoryCarsDatabase.SaveCarAsync(App.TopCars[0]);
             NextPage();
         }
 
@@ -38,6 +39,7 @@ namespace PhotoBuy.Pages
             CarInfo car = e.Item as CarInfo;
             App.DatabaseCurrentCar.DeleteAll();
             App.DatabaseCurrentCar.SaveCarAsync(car);
+            App.HistoryCarsDatabase.SaveCarAsync(car);
             NextPage();
         }
 

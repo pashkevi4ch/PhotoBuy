@@ -31,6 +31,5 @@ namespace PhotoBuy
                 Routing.RegisterRoute(item.Key, item.Value);
             }
         }
-
     }
 }

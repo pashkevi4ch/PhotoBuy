@@ -40,6 +40,35 @@ namespace PhotoBuy
             }
         }
 
+        public const string DATABASE_NAME_History = "History.db";
+        static HistoryDatabase historyDatabase;
+        public static HistoryDatabase HistoryCarsDatabase
+        {
+            get
+            {
+                if (historyDatabase == null)
+                {
+                    historyDatabase = new HistoryDatabase(
+                        Path.Combine(
+                            Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), DATABASE_NAME_History));
+                }
+                return historyDatabase;
+            }
+        }
+
+        public static IList<CarInfo> HistoryCars
+        {
+            get
+            {
+                List<CarInfo> requests = new List<CarInfo>();
+                if (historyDatabase != null)
+                {
+                    requests = App.HistoryCarsDatabase.GetCarsAsync().Result;
+                }
+                return requests;
+            }
+        }
+
         public const string DATABASE_NAME_TopCars = "TopCars.db";
         static TopCarsDatabase databaseTopCars;
         public static TopCarsDatabase DatabaseTopCars

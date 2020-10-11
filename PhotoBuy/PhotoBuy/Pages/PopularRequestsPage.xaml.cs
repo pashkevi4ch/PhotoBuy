@@ -13,9 +13,13 @@ namespace PhotoBuy.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class PopularRequestsPage : ContentPage
     {
+        public static IList<CarInfo> Cars;
         public PopularRequestsPage()
         {
             InitializeComponent();
+            Cars = new List<CarInfo>();
+            Cars = App.HistoryCarsDatabase.GetCarsAsync().Result;
+            marketplaceListView.ItemsSource = Cars;
         }
 
         private void marketplaceListView_ItemTapped(object sender, ItemTappedEventArgs e)
