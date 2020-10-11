@@ -104,7 +104,6 @@ namespace PhotoBuy.Pages
             request.AddHeader("accept", "application/json");
             request.AddParameter("application/json", "{\"comment\":\"Комментарий\",\"customer_party\":{\"email\":\"" + emailEntry.Text + "\",\"income_amount\":" + incomeAmountEntry.Text + ",\"person\":{\"birth_date_time\":\"" + birthDateEntry.Text + "\",\"birth_place\":\"" + birthPlaceEntry.Text + "\",\"family_name\":\"" + familyNameEntry.Text + "\",\"first_name\":\"" + firstNameEntry.Text + "\",\"gender\":\"" + genderEntry.Text + "\",\"middle_name\":\"" + middleNameEntry.Text + "\",\"nationality_country_code\":\"RU\"},\"phone\":\"" + phoneEntry.Text + "\"},\"datetime\":\"2020-10-10T08:15:47Z\",\"interest_rate\":15.7,\"requested_amount\":" + App.CurrentCar.MinPrice + ",\"requested_term\":" + (int)Slider2.Value*12 + ",\"trade_mark\":\"" + App.CurrentCar.Name + "\",\"vehicle_cost\":" + App.CurrentCar.MinPrice + "}", ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
-
             emailEntry.Text = "";
             incomeAmountEntry.Text = "";
             birthDateEntry.Text = "";
@@ -114,7 +113,15 @@ namespace PhotoBuy.Pages
             genderEntry.Text = "";
             middleNameEntry.Text = "";
             phoneEntry.Text = "";
-            await DisplayAlert("Заявка подана", "Ожидайте подтверждения", "Oк");
+            var check = response.Content.Split(new string[] { "\"application_status\"" }, StringSplitOptions.None)[1].Split(new string[] { "," }, StringSplitOptions.None)[0] == ":\"prescore_approved\"";
+            if (check)
+            {
+                await DisplayAlert("Ваша заявка предварительно одобрена", $"Вы можете обратиться по поводу официального оформления до {response.Content.Split(new string[] { "\"decision_end_date\":\""}, StringSplitOptions.None)[1].Split(new string[] { "\","}, StringSplitOptions.None)[0]}", "Oк");
+            }
+            else
+            {
+                await DisplayAlert("Ваша заявка предварительно не одобрена", "", "Oк");
+            }
 
         }
     }
