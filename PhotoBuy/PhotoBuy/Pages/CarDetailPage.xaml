@@ -65,6 +65,8 @@
                 <Entry x:Name="middleNameEntry"></Entry>
                 <Label Text="Телефон"></Label>
                 <Entry x:Name="phoneEntry"></Entry>
+
+                <Button Text="Подтвердить" x:Name="confirmButton" Clicked="confirmButton_Clicked"></Button>
             </StackLayout>
         </ScrollView>
         

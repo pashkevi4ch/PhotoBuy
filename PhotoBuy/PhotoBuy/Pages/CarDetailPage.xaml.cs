@@ -78,5 +78,10 @@ namespace PhotoBuy.Pages
         {
             var smth = Slider1.Value;   
         }
+
+        private void confirmButton_Clicked(object sender, EventArgs e)
+        {
+
+        }
     }
 }

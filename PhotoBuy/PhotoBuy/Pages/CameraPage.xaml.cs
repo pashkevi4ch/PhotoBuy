@@ -44,6 +44,7 @@ namespace PhotoBuy.Pages
                     {
                         MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
                         image.Source = ImageSource.FromFile(photo.Path);
+                        changingLabel.Text = "Подождите";
                         topAlocatedCars = GetTopCars(photo);
 
                     }
@@ -71,6 +72,8 @@ namespace PhotoBuy.Pages
                         Directory = "Sample",
                         Name = "test.jpg"
                     });
+
+                    changingLabel.Text = "Подождите";
 
                     topAlocatedCars = GetTopCars(file);
                     if (file == null)

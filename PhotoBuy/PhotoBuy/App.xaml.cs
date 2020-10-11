@@ -78,6 +78,17 @@ namespace PhotoBuy
                 {
                     for (int i = 1;i < App.TopCars.Count; i++)
                     {
+                        var car = new CarInfo();
+                        car.ColorsCount = App.TopCars[i].ColorsCount;
+                        car.Country = App.TopCars[i].Country;
+                        car.Logo = App.TopCars[i].Logo;
+                        car.MinPrice = App.TopCars[i].MinPrice;
+                        car.Model = App.TopCars[i].Model;
+                        car.Name = App.TopCars[i].Name;
+                        car.OwnTitle = App.TopCars[i].OwnTitle;
+                        car.Probability = App.TopCars[i].Probability;
+                        car.RenderPhotos = App.TopCars[i].RenderPhotos.Split(new string[] { "," }, StringSplitOptions.None)[0];
+                        car.SizesPhotos = App.TopCars[i].SizesPhotos;
                         cars.Add(App.TopCars[i]);
                     }
                 }
