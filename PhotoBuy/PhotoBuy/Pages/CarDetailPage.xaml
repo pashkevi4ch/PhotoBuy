@@ -11,6 +11,7 @@
         <ScrollView>
             <StackLayout>
                 <Label x:Name="CarNameLabel" HorizontalOptions="Center" FontAttributes="Bold" Margin="10"></Label>
+                <Label x:Name="CarPriceLabel" HorizontalOptions="Center"></Label>
                 <Image Aspect="AspectFill" x:Name="CarImage"></Image>
                 <Label Text="Характеристики" FontAttributes="Bold" HorizontalOptions="Center" Margin="10"></Label>
                 <Grid>
@@ -25,7 +26,13 @@
                     </Grid.RowDefinitions>
 
                     <BoxView BackgroundColor="#E7E7E7" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="0" Grid.Row="0" CornerRadius="10"></BoxView>
+                    <Label Text="Страна" Grid.Column="0" Grid.Row="0"></Label>
+                    <Label Text="Модель" Grid.Column="0" Grid.Row="1"></Label>
+                    <Label Text="Количество владелецев" Grid.Column="0" Grid.Row="2"></Label>
 
+                    <Label x:Name="CountryLabel" Grid.Row="0" Grid.Column="1"></Label>
+                    <Label x:Name="ModelLabel" Grid.Row="1" Grid.Column="1"></Label>
+                    <Label x:Name="OwnerLabel" Grid.Row="2" Grid.Column="1"></Label>
                 </Grid>
 
                 <Label Text="Кредит на спецусловиях...." FontAttributes="Bold" HorizontalOptions="Center"></Label>

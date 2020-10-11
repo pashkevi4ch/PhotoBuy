@@ -24,6 +24,10 @@ namespace PhotoBuy.Pages
             InitializeComponent();
             CarImage.Source = App.CurrentCar.RenderPhotos.Split(new string[] { "," }, StringSplitOptions.None)[0];
             CarNameLabel.Text = App.CurrentCar.Name;
+            CarPriceLabel.Text = App.CurrentCar.MinPrice.ToString();
+            CountryLabel.Text = App.CurrentCar.Country;
+            ModelLabel.Text = App.CurrentCar.Model;
+            OwnerLabel.Text = App.CurrentCar.OwnTitle;
             Header1 = new Label() { Text = "Первый взнос"};
             Header2 = new Label() {Text = "Период"};
             LabelFee = new Label();
@@ -79,7 +83,7 @@ namespace PhotoBuy.Pages
             var smth = Slider1.Value;   
         }
 
-        private void confirmButton_Clicked(object sender, EventArgs e)
+        private async void confirmButton_Clicked(object sender, EventArgs e)
         {
             var client = new RestClient("https://gw.hackathon.vtb.ru/vtb/hackathon/carloan");
             var request = new RestRequest(Method.POST);
@@ -88,6 +92,18 @@ namespace PhotoBuy.Pages
             request.AddHeader("accept", "application/json");
             request.AddParameter("application/json", "{\"comment\":\"Комментарий\",\"customer_party\":{\"email\":\"" + emailEntry.Text + "\",\"income_amount\":" + incomeAmountEntry.Text + ",\"person\":{\"birth_date_time\":\"" + birthDateEntry.Text + "\",\"birth_place\":\"" + birthPlaceEntry.Text + "\",\"family_name\":\"" + familyNameEntry.Text + "\",\"first_name\":\"" + firstNameEntry.Text + "\",\"gender\":\"" + genderEntry.Text + "\",\"middle_name\":\"" + middleNameEntry.Text + "\",\"nationality_country_code\":\"RU\"},\"phone\":\"" + phoneEntry.Text + "\"},\"datetime\":\"2020-10-10T08:15:47Z\",\"interest_rate\":15.7,\"requested_amount\":" + App.CurrentCar.MinPrice + ",\"requested_term\":" + (int)Slider2.Value*12 + ",\"trade_mark\":\"" + App.CurrentCar.Name + "\",\"vehicle_cost\":" + App.CurrentCar.MinPrice + "}", ParameterType.RequestBody);
             IRestResponse response = client.Execute(request);
+
+            emailEntry.Text = "";
+            incomeAmountEntry.Text = "";
+            birthDateEntry.Text = "";
+            birthPlaceEntry.Text = "";
+            familyNameEntry.Text = "";
+            firstNameEntry.Text = "";
+            genderEntry.Text = "";
+            middleNameEntry.Text = "";
+            phoneEntry.Text = "";
+            await DisplayAlert("Заявка подана", "Ожидайте подтверждения", "Oк");
+
         }
     }
 }
