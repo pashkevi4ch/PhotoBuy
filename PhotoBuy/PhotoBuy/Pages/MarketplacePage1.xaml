@@ -10,8 +10,8 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <Label x:Name="firstCarNameLabel" HorizontalOptions="Center" FontAttributes="Bold" Margin="15"></Label>
-            <Label x:Name="firstCarCostLabel" Margin="10,0,0,0"></Label>
+            <Label x:Name="firstCarNameLabel" HorizontalOptions="Center" FontAttributes="Bold" Margin="15" FontSize="Title" TextColor="Black"></Label>
+            <Label x:Name="firstCarCostLabel" Margin="10,0,0,0" TextColor="Black"></Label>
             <Grid HorizontalOptions="Fill">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"></RowDefinition>
@@ -23,7 +23,7 @@
                 <Image Grid.Column="0" Grid.Row="0" x:Name="firstCarImage" HorizontalOptions="Fill" Aspect="AspectFill"></Image>
                 <Button Grid.Row="0" Grid.Column="0" x:Name="firstCarDetailButton" BackgroundColor="Transparent" HorizontalOptions="Fill" VerticalOptions="Fill" Clicked="firstCarDetailButton_Clicked"></Button>
             </Grid>
-            <Label Text="Возможно, Вы искали это" FontAttributes="Bold" HorizontalOptions="Center" Margin="10"></Label>
+            <Label Text="Возможно, Вы искали это" FontAttributes="Bold" HorizontalOptions="Center" Margin="10" TextColor="Black"></Label>
 
             <ListView x:Name="marketplaceListView"
                       HasUnevenRows="True"
@@ -43,7 +43,7 @@
 
                                 <Label Grid.Row="0"
                        Text="{Binding Name}"
-                       FontAttributes="Bold"></Label>
+                       FontAttributes="Bold" TextColor="Black"></Label>
                                 <Image Source="{Binding RenderPhotos}" Grid.Row="1"></Image>
                             </Grid>
                         </ViewCell>

@@ -35,7 +35,6 @@ C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\P
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\BlogPage.xaml.g.cs
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\CameraPage.xaml.g.cs
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\CarDetailPage.xaml.g.cs
-C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\MarketplacePage.xaml.g.cs
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\MarketplacePage1.xaml.g.cs
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\NotificationPage.xaml.g.cs
 C:\Users\Anna\source\repos\PhotoBuy\PhotoBuy\PhotoBuy\obj\Debug\netstandard2.0\Pages\PopularRequestsPage.xaml.g.cs

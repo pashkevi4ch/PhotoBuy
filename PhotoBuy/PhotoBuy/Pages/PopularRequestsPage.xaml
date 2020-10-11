@@ -4,15 +4,16 @@
              xmlns:view="clr-namespace:PhotoBuy.Views"
              xmlns:local="clr-namespace:PhotoBuy"
              x:Class="PhotoBuy.Pages.PopularRequestsPage">
-    <Shell.TitleView>
+    <!--<Shell.TitleView>
         <view:BarView></view:BarView>
-    </Shell.TitleView>
+    </Shell.TitleView>-->
     
     <ContentPage.Content>
         <StackLayout>
             <ListView x:Name="marketplaceListView"
                       HasUnevenRows="True"
-                      ItemsSource="{x:Static local:App.PreviousRequests}">
+                      ItemsSource="{x:Static local:App.PreviousRequests}"
+                      ItemTapped="marketplaceListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -27,7 +28,7 @@
 
                                 <Label Grid.Row="0"
                        Text="{Binding Name}"
-                       FontAttributes="Bold"></Label>
+                       FontAttributes="Bold" TextColor="Black"></Label>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

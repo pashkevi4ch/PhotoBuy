@@ -10,9 +10,14 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Label x:Name="CarNameLabel" HorizontalOptions="Center" FontAttributes="Bold" Margin="10"></Label>
-                <Label x:Name="CarPriceLabel" HorizontalOptions="Center"></Label>
-                <Image Aspect="AspectFill" x:Name="CarImage"></Image>
+                <Label x:Name="CarNameLabel" HorizontalOptions="Center" FontAttributes="Bold" Margin="10" TextColor="Black" FontSize="Title"></Label>
+                <Label x:Name="CarPriceLabel" HorizontalOptions="Center" TextColor="Black"></Label>
+                <!--<Image Aspect="AspectFill" x:Name="CarImage"></Image>-->
+                <ScrollView Orientation="Horizontal">
+                    <StackLayout x:Name="imageStackLayout" Orientation="Horizontal">
+                        <Image Aspect="AspectFill" x:Name="CarImage"></Image>
+                    </StackLayout>
+                </ScrollView>
                 <Label Text="Характеристики" FontAttributes="Bold" HorizontalOptions="Center" Margin="10"></Label>
                 <Grid>
                     <Grid.ColumnDefinitions>
@@ -23,23 +28,26 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
 
-                    <BoxView BackgroundColor="#E7E7E7" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="0" Grid.Row="0" CornerRadius="10"></BoxView>
-                    <Label Text="Страна" Grid.Column="0" Grid.Row="0"></Label>
-                    <Label Text="Модель" Grid.Column="0" Grid.Row="1"></Label>
-                    <Label Text="Количество владелецев" Grid.Column="0" Grid.Row="2"></Label>
+                    <BoxView BackgroundColor="#E7E7E7" Grid.ColumnSpan="2" Grid.RowSpan="4" Grid.Column="0" Grid.Row="0" CornerRadius="10"></BoxView>
+                    <Label Text="Страна" Grid.Column="0" Grid.Row="0" TextColor="Black" Margin="10,10,0,0"></Label>
+                    <Label Text="Модель" Grid.Column="0" Grid.Row="1" TextColor="Black" Margin="10,10,0,0"></Label>
+                    <Label Text="Поколение" Grid.Column="0" Grid.Row="2" TextColor="Black" Margin="10,10,0,0"></Label>
+                    <Label Text="Вариантов цветов" Grid.Column="0" Grid.Row="3" TextColor="Black" Margin="10,10,0,10"></Label>
 
-                    <Label x:Name="CountryLabel" Grid.Row="0" Grid.Column="1"></Label>
-                    <Label x:Name="ModelLabel" Grid.Row="1" Grid.Column="1"></Label>
-                    <Label x:Name="OwnerLabel" Grid.Row="2" Grid.Column="1"></Label>
+                    <Label x:Name="CountryLabel" Grid.Row="0" Grid.Column="1" TextColor="Black" Margin="10,10,0,0"></Label>
+                    <Label x:Name="ModelLabel" Grid.Row="1" Grid.Column="1" TextColor="Black" Margin="10,10,0,0"></Label>
+                    <Label x:Name="OwnerLabel" Grid.Row="2" Grid.Column="1" TextColor="Black" Margin="10,10,0,0"></Label>
+                    <Label x:Name="ColorsLabel" Grid.Row="3" Grid.Column="1" TextColor="Black" Margin="10,10,0,10"></Label>
                 </Grid>
 
-                <Label Text="Кредит на спецусловиях...." FontAttributes="Bold" HorizontalOptions="Center"></Label>
+                <Label Text="Кредит на спецусловиях от 9%" FontAttributes="Bold" HorizontalOptions="Center" Margin="0,15,0,0" TextColor="Black"></Label>
                 <Label Text="Первый взнос"></Label>
                 <StackLayout x:Name="SliderStackLayout"></StackLayout>
 
-                <Grid>
+                <Grid Margin="10">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="Auto"></ColumnDefinition>
                         <ColumnDefinition Width="*"></ColumnDefinition>
@@ -48,32 +56,39 @@
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
                         <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                        <RowDefinition></RowDefinition>
                     </Grid.RowDefinitions>
 
-                    <BoxView BackgroundColor="#E7E7E7" Grid.ColumnSpan="2" Grid.RowSpan="3" Grid.Column="0" Grid.Row="0" CornerRadius="10"></BoxView>
+                    <BoxView BackgroundColor="#E7E7E7" Grid.ColumnSpan="2" Grid.RowSpan="10" Grid.Column="0" Grid.Row="0" CornerRadius="10"></BoxView>
+                    <Label Text="Email" Grid.Row="0" Grid.Column="0" Margin="10,10,0,0"></Label>
+                    <Entry x:Name="emailEntry" Grid.Row="0" Grid.Column="1" Margin="0,10,10,0"></Entry>
+                    <Label Text="Зарплата" Grid.Row="1" Grid.Column="0" Margin="10,10,0,0"></Label>
+                    <Entry x:Name="incomeAmountEntry" Grid.Row="1" Grid.Column="1" Margin="0,10,10,0"></Entry>
+                    <Label Text="Дата рождения (гггг-мм-дд)" Grid.Row="2" Grid.Column="0" Margin="10,10,0,0"></Label>
+                    <Entry x:Name="birthDateEntry" Grid.Row="2" Grid.Column="1" Margin="0,10,10,0"></Entry>
+                    <Label Text="Место рождения" Grid.Row="3" Grid.Column="0" Margin="10,10,0,0"></Label>
+                    <Entry x:Name="birthPlaceEntry" Grid.Row="3" Grid.Column="1" Margin="0,10,10,0"></Entry>
+                    <Label Text="Фамилия" Grid.Row="4" Grid.Column="0" Margin="10,10,0,0"></Label>
+                    <Entry x:Name="familyNameEntry" Grid.Row="4" Grid.Column="1" Margin="0,10,10,0"></Entry>
+                    <Label Text="Имя" Grid.Row="5" Grid.Column="0" Margin="10,10,0,0"> </Label>
+                    <Entry x:Name="firstNameEntry" Grid.Row="5" Grid.Column="1" Margin="0,10,10,0"></Entry>
+                    <Label Text="Пол" Grid.Row="6" Grid.Column="0" Margin="10,10,0,0"></Label>
+                    <Entry x:Name="genderEntry" Grid.Row="6" Grid.Column="1" Margin="0,10,10,0"></Entry>
+                    <Label Text="Отчество" Grid.Row="7" Grid.Column="0" Margin="10,10,0,0"></Label>
+                    <Entry x:Name="middleNameEntry" Grid.Row="7" Grid.Column="1" Margin="0,10,10,0"></Entry>
+                    <Label Text="Телефон" Grid.Row="8" Grid.Column="0" Margin="10,10,0,10"></Label>
+                    <Entry x:Name="phoneEntry" Grid.Row="8" Grid.Column="1" Margin="0,10,10,10"></Entry>
 
+                    <Button Text="Подтвердить" x:Name="confirmButton" Grid.Row="9" Grid.ColumnSpan="2" Grid.Column="0" BackgroundColor="Blue" TextColor="White" CornerRadius="10" Margin="20,10,20,10" Clicked="confirmButton_Clicked"></Button>
                 </Grid>
 
-                <Label Text="Email"></Label>
-                <Entry x:Name="emailEntry"></Entry>
-                <Label Text="Зарплата"></Label>
-                <Entry x:Name="incomeAmountEntry"></Entry>
-                <Label Text="Дата рождения (гггг-мм-дд)"></Label>
-                <Entry x:Name="birthDateEntry"></Entry>
-                <Label Text="Место рождения"></Label>
-                <Entry x:Name="birthPlaceEntry"></Entry>
-                <Label Text="Фамилия"></Label>
-                <Entry x:Name="familyNameEntry"></Entry>
-                <Label Text="Имя"></Label>
-                <Entry x:Name="firstNameEntry"></Entry>
-                <Label Text="Пол"></Label>
-                <Entry x:Name="genderEntry"></Entry>
-                <Label Text="Отчество"></Label>
-                <Entry x:Name="middleNameEntry"></Entry>
-                <Label Text="Телефон"></Label>
-                <Entry x:Name="phoneEntry"></Entry>
-
-                <Button Text="Подтвердить" x:Name="confirmButton" Clicked="confirmButton_Clicked"></Button>
+                
             </StackLayout>
         </ScrollView>
         

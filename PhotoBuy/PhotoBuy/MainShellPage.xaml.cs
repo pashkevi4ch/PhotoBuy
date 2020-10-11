@@ -18,7 +18,6 @@ namespace PhotoBuy
         {
             InitializeComponent();
             RegisterRoutes();
-            T();
         }
 
         void RegisterRoutes()
@@ -31,11 +30,6 @@ namespace PhotoBuy
             {
                 Routing.RegisterRoute(item.Key, item.Value);
             }
-        }
-
-        private async void T()
-        {
-            await DisplayAlert(App.DatabasePreviousRequests.GetRequestsAsync().Result.Count.ToString(), "", "OK");
         }
     }
 }

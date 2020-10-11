@@ -23,11 +23,23 @@ namespace PhotoBuy.Pages
         {
             InitializeComponent();
             CarImage.Source = App.CurrentCar.RenderPhotos.Split(new string[] { "," }, StringSplitOptions.None)[0];
+            int i = 0;
+            foreach (var im in App.CurrentCar.RenderPhotos.Split(new string[] { "," }, StringSplitOptions.None))
+            {
+                if (i > 0)
+                {
+                    Image image = new Image() { Source = im };
+                    imageStackLayout.Children.Add(image);
+                }
+                i += 1;
+            }
+
             CarNameLabel.Text = App.CurrentCar.Name;
             CarPriceLabel.Text = App.CurrentCar.MinPrice.ToString();
             CountryLabel.Text = App.CurrentCar.Country;
             ModelLabel.Text = App.CurrentCar.Model;
             OwnerLabel.Text = App.CurrentCar.OwnTitle;
+            ColorsLabel.Text = App.CurrentCar.ColorsCount.ToString();
             Header1 = new Label() { Text = "Первый взнос"};
             Header2 = new Label() {Text = "Период"};
             LabelFee = new Label();

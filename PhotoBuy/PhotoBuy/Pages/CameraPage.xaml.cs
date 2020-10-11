@@ -22,7 +22,8 @@ namespace PhotoBuy.Pages
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class CameraPage : ContentPage
     {
-        private static Timer aTimer;
+        //private static Timer aTimer;
+
         public CameraPage()
         {
             InitializeComponent();
@@ -45,6 +46,7 @@ namespace PhotoBuy.Pages
                         MediaFile photo = await CrossMedia.Current.PickPhotoAsync();
                         image.Source = ImageSource.FromFile(photo.Path);
                         changingLabel.Text = "Подождите";
+                        changingLabel.HorizontalTextAlignment = TextAlignment.Center;
                         topAlocatedCars = GetTopCars(photo);
 
                     }
@@ -67,6 +69,7 @@ namespace PhotoBuy.Pages
                         return;
                     }
 
+
                     var file = await CrossMedia.Current.TakePhotoAsync(new Plugin.Media.Abstractions.StoreCameraMediaOptions
                     {
                         Directory = "Sample",
@@ -74,6 +77,7 @@ namespace PhotoBuy.Pages
                     });
 
                     changingLabel.Text = "Подождите";
+                    changingLabel.HorizontalTextAlignment = TextAlignment.Center;
 
                     topAlocatedCars = GetTopCars(file);
                     if (file == null)
@@ -116,6 +120,12 @@ namespace PhotoBuy.Pages
                     //NextPage();
                 
             };
+        }
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            changingLabel.Text = "Сделать фотографию";
+            changingLabel.HorizontalTextAlignment = TextAlignment.Center;
         }
 
         private async void NextPage()
